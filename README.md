@@ -7,12 +7,12 @@ at native resolution, run through [`scrollprize/ink_9um`](https://huggingface.co
 depth directions, and checked by eye. Everything streams from the open-data bucket. The whole survey ran on one
 machine: an RTX 3060 (12 GB), a 14-core Xeon and a home Wi-Fi link.
 
-> Status: <!-- STATUS -->22 patches (319 cm²) on 17 of the 21 eligible scrolls without catalog segments, and 20 of the team's published segments, as of 2026-09-23 22:14Z. The survey is still running and this page is regenerated as patches finish.<!-- /STATUS -->
+> Status: <!-- STATUS -->26 patches (384 cm²) on 19 of the 21 eligible scrolls without catalog segments, and 20 of the team's published segments, as of 2026-09-23 23:07Z. The survey is still running and this page is regenerated as patches finish.<!-- /STATUS -->
 
 ## Summary
 
 <!-- SUMMARY -->
-- **No letter-like ink anywhere so far.** On 22 automatically grown patches (319 cm² in total) the two checkpoints give speckle in both depth directions: no rows and no letter shapes (row scores 8.0–22.5).
+- **No letter-like ink anywhere so far.** On 26 automatically grown patches (384 cm² in total) the two checkpoints give speckle in both depth directions: no rows and no letter shapes (row scores 8.0–28.7).
 - **The team's own segments** of PHerc0800 and PHerc1447 (20 of 21; 1 held back from this release for further checks), run through all 14 released checkpoints and averaged, show the same: blobs, bright rims around holes in the mesh and responses on onion-ring artifacts (see *Validation*), no rows (row scores 2.5–23.1).
 - **The pipeline does find text where there is text.** Held-out PHerc0139 segments, never seen by the models, give clear rows (row scores 73–148, rows every 4.9 mm). So these negatives say something about the models on these scrolls, not about a broken setup.
 - **Most automatic patches do not follow a single sheet** for long near the compressed core: their renders show layer-crossing swirls. Hand refinement in VC3D, as the team's workflow recommends, is the obvious next step for any region worth a closer look.
@@ -32,8 +32,10 @@ python fls.py run --scroll PHerc1218 --seed 2514 4434 11616 --gens 60 --name my_
 ```
 
 Each run writes to `$FLS_WORK/patches/<scroll>/<name>/`: the grown surface (tifxyz), the 28-layer surface volume
-(zarr), four ink maps (two checkpoints × two directions) as TIFF and PNG, the render's middle layer as PNG, and
-`scores.json`. Steps whose output exists are skipped, so an interrupted run resumes. Checkpoints are downloaded from
+(zarr), four ink maps (two checkpoints × two directions) plus the mean of the checkpoints for each direction, as TIFF
+and PNG, the render's middle layer as PNG, and `scores.json`. Averaging helps: on held-out PHerc0139 w045 the two
+default checkpoints score 84 and 111 alone and 125 averaged. `--ckpts all` runs all 14 released checkpoints (148 on
+w045), at seven times the inference cost. Steps whose output exists are skipped, so an interrupted run resumes. Checkpoints are downloaded from
 Hugging Face on first use. `FLS_NO_CUDNN=1` disables cuDNN for inference; that was needed here because of a cuDNN
 sub-library mismatch in the local PyTorch install.
 
@@ -114,7 +116,9 @@ A 20-generation test patch with the default seed (PHerc0343, 0.42 cm²) took 3 m
 | PHerc0175A | v3 z 0.5, r 0.7 | 11.7 | follows the sheet throughout (crosshatch) | speckle in both directions; no rows, no letter-like shapes | 13.0 | [view](results/sheets/v3_PHerc0175A_s7.jpg) |
 | PHerc0175B | v1 z 0.4, r 0.6 | 14.1 | on-sheet band across the middle, swirls elsewhere | speckle; one ~1 mm ring in both directions (not direction-specific); no rows, no letter-like shapes | 10.7 | [view](results/sheets/v1_PHerc0175B_s1.jpg) |
 | PHerc0175B | v2 z 0.4, r 0.35 | 15.4 | layer-crossing swirls | speckle in both directions; no rows, no letter-like shapes | 15.4 | [view](results/sheets/v2_PHerc0175B_s0.jpg) |
+| PHerc0175B | v3 z 0.5, r 0.7 | 15.2 | layer-crossing swirls, small on-sheet areas | speckle in both directions; no rows, no letter-like shapes | 10.5 | [view](results/sheets/v3_PHerc0175B_s9.jpg) |
 | PHerc0191 | v2 z 0.4, r 0.35 | 16.2 | swirls, small on-sheet core | speckle in both directions; no rows, no letter-like shapes | 11.1 | [view](results/sheets/v2_PHerc0191_s0.jpg) |
+| PHerc0191 | v3 z 0.5, r 0.7 | 17.5 | radial swirls and gaps (layer-crossing) | speckle in both directions; no rows, no letter-like shapes | 28.7 | [view](results/sheets/v3_PHerc0191_s9.jpg) |
 | PHerc0211 | v2 z 0.4, r 0.35 | 14.3 | on-sheet core, swirls at edges | speckle in both directions; no rows, no letter-like shapes | 10.1 | [view](results/sheets/v2_PHerc0211_s0.jpg) |
 | PHerc0257 | v2 z 0.4, r 0.35 | 16.9 | radial swirls (compressed region) | speckle in both directions; no rows, no letter-like shapes | 10.1 | [view](results/sheets/v2_PHerc0257_s0.jpg) |
 | PHerc0268 | v2 z 0.4, r 0.35 | 14.6 | swirls and gaps | speckle in both directions; no rows, no letter-like shapes | 12.4 | [view](results/sheets/v2_PHerc0268_s0.jpg) |
@@ -125,8 +129,10 @@ A 20-generation test patch with the default seed (PHerc0343, 0.42 cm²) took 3 m
 | PHerc0483B | v2 z 0.4, r 0.35 | 14.3 | radial swirls (layer-crossing near the core) | speckle in both directions; no rows, no letter-like shapes | 12.3 | [view](results/sheets/v2_PHerc0483B_s0.jpg) |
 | PHerc0490A | v2 z 0.4, r 0.35 | 14.6 | radial swirls | speckle in both directions; no rows, no letter-like shapes | 8.8 | [view](results/sheets/v2_PHerc0490A_s0.jpg) |
 | PHerc0490B | v2 z 0.4, r 0.35 | 15.0 | swirls and dark gaps | speckle in both directions; no rows, no letter-like shapes | 11.6 | [view](results/sheets/v2_PHerc0490B_s0.jpg) |
+| PHerc0813 | v2 z 0.4, r 0.35 | 16.2 | on-sheet band across the middle, swirls around it | speckle in both directions; no rows, no letter-like shapes | 11.8 | [view](results/sheets/v2_PHerc0813_s0.jpg) |
 | PHerc0826 | v2 z 0.4, r 0.35 | 17.1 | swirls and gaps | speckle in both directions; no rows, no letter-like shapes | 22.5 | [view](results/sheets/v2_PHerc0826_s0.jpg) |
 | PHerc0846A | v2 z 0.4, r 0.35 | 15.3 | on the sheet in the centre (crosshatch), swirls around it | speckle in both directions; no rows, no letter-like shapes | 9.5 | [view](results/sheets/v2_PHerc0846A_s0.jpg) |
+| PHerc0846B | v2 z 0.4, r 0.35 | 16.0 | arcs along the layers with swirls around a compressed centre | speckle in both directions; no rows, no letter-like shapes | 20.2 | [view](results/sheets/v2_PHerc0846B_s0.jpg) |
 | PHerc1218 | v2 z 0.4, r 0.35 | 13.3 | on-sheet half, swirls | speckle in both directions; no rows, no letter-like shapes | 13.1 | [view](results/sheets/v2_PHerc1218_s0.jpg) |
 
 **Published segments (14-checkpoint ensemble, forward):**

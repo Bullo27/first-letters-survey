@@ -1,0 +1,45 @@
+{
+    "area_cm2": 15.979367011530691,
+    "area_vx2": 18231493.834332477,
+    "bbox": [
+        [
+            4303.3828125,
+            2835.173583984375,
+            2831.592529296875
+        ],
+        [
+            5642.51123046875,
+            5193.99951171875,
+            8114.41748046875
+        ]
+    ],
+    "elapsed_time_s": 3925.580175864,
+    "format": "tifxyz",
+    "max_gen": 100,
+    "scale": [
+        0.05000000074505806,
+        0.05000000074505806
+    ],
+    "seed": [
+        4961.0,
+        4511.0,
+        5568.0
+    ],
+    "source": "vc_grow_seg_from_seed",
+    "target_volume": "20250804142305-surface-20260413222639-surface-m7-L0-th0.2.zarr",
+    "type": "seg",
+    "uuid": "auto_grown_20260923233226654",
+    "vc_gsfs_mode": "explicit_seed",
+    "vc_gsfs_params": {
+        "cache_root": "/media/bullo/Storage/vesuvius_work/fl_survey/tracer_cache",
+        "cache_size": 4000000000,
+        "generations": 100,
+        "min_area_cm": 0,
+        "mode": "seed",
+        "normal_grid_path": "/media/bullo/Storage/vesuvius_work/fl_survey/normal_grids/PHerc0846B/20250804142305",
+        "step_size": 20,
+        "thread_limit": 8,
+        "voxelsize": 9.362
+    },
+    "vc_gsfs_version": "dev"
+}

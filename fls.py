@@ -224,11 +224,22 @@ def report(scroll, sv, preds, outdir):
         h, w = img.shape; s = min(1.0, 1400 / max(h, w)); img = cv2.resize(img, (max(1, int(w * s)), max(1, int(h * s))), interpolation=cv2.INTER_AREA)
         cv2.imwrite(os.path.join(outdir, name), cv2.normalize(img, None, 0, 255, cv2.NORM_MINMAX) if norm else img)
     save(mid, 'render_mid.png', True)
+    sums = {}
     for p in preds:
         q = np.asarray(tifffile.imread(p)).astype(np.float32); q = q[..., 0] if q.ndim == 3 else q
         if q.max() > 1.5: q /= 255.0 if q.max() <= 255 else 65535.0
         save((np.clip((q - 0.25) / 0.5, 0, 1) * 255).astype(np.uint8), os.path.basename(p).replace('.tif', '.png'), False)
         res[os.path.basename(p)] = row_score(q, r['voxel_um'], valid)
+        dr = 'reverse' if p.endswith('_reverse.tif') else 'forward'
+        n, acc = sums.get(dr, (0, 0)); sums[dr] = (n + 1, acc + q)
+    # Averaging checkpoints per direction lifts real text: on held-out PHerc0139 w045 the two default checkpoints
+    # score 84 and 111 alone and 125 averaged (all 14 checkpoints: 148).
+    for dr, (n, acc) in sums.items():
+        if n < 2: continue
+        m = acc / n; name = f'ink_mean_{dr}'
+        tifffile.imwrite(os.path.join(outdir, name + '.tif'), (np.clip(m, 0, 1) * 255).astype(np.uint8))
+        save((np.clip((m - 0.25) / 0.5, 0, 1) * 255).astype(np.uint8), name + '.png', False)
+        res[name + '.tif'] = row_score(m, r['voxel_um'], valid)
     json.dump(res, open(os.path.join(outdir, 'scores.json'), 'w'), indent=1)
     for k, v in res.items(): log(f'{k}: {v or "no row score (the patch is too small to measure a 2.5-8 mm period)"}')
 
@@ -240,8 +251,11 @@ def main():
     r = sub.add_parser('run'); r.add_argument('--scroll', required=True); r.add_argument('--seed', type=int, nargs=3, metavar=('X', 'Y', 'Z'))
     r.add_argument('--seed-index', type=int, help='index into the "seeds" list (default: first seed at mid height, half radius)')
     r.add_argument('--gens', type=int, default=100); r.add_argument('--threads', type=int, default=8)
-    r.add_argument('--ckpts', nargs='+', default=DEFAULT_CKPTS); r.add_argument('--batch', type=int, default=4); r.add_argument('--name')
+    r.add_argument('--ckpts', nargs='+', default=DEFAULT_CKPTS, help='checkpoint names, or "all" for the 14 released ones')
+    r.add_argument('--batch', type=int, default=4); r.add_argument('--name')
     a = ap.parse_args()
+    if a.cmd == 'run' and a.ckpts == ['all']:
+        a.ckpts = [f'hybrid_3d2d-seed{s}/step-{k:06d}' for s in (42, 43) for k in (10000, 20000, 30000, 40000, 50000, 60000, 75000)]
     if a.cmd == 'seeds':
         for i, sd in enumerate(pick_seeds(a.scroll)): print(i, json.dumps(sd))
         return
