@@ -7,12 +7,12 @@ at native resolution, run through [`scrollprize/ink_9um`](https://huggingface.co
 depth directions, and checked by eye. Everything streams from the open-data bucket. The whole survey ran on one
 machine: an RTX 3060 (12 GB), a 14-core Xeon and a home Wi-Fi link.
 
-> Status: <!-- STATUS -->26 patches (384 cm²) on 19 of the 21 eligible scrolls without catalog segments, and 20 of the team's published segments, as of 2026-09-23 23:07Z. The survey is still running and this page is regenerated as patches finish.<!-- /STATUS -->
+> Status: <!-- STATUS -->33 patches (494 cm²) on 21 of the 21 eligible scrolls without catalog segments, and 20 of the team's published segments, as of 2026-09-24 00:51Z. The survey is still running and this page is regenerated as patches finish.<!-- /STATUS -->
 
 ## Summary
 
 <!-- SUMMARY -->
-- **No letter-like ink anywhere so far.** On 26 automatically grown patches (384 cm² in total) the two checkpoints give speckle in both depth directions: no rows and no letter shapes (row scores 8.0–28.7).
+- **No letter-like ink anywhere so far.** On 33 automatically grown patches (494 cm² in total) the two checkpoints give speckle in both depth directions: no rows and no letter shapes (row scores 8.0–28.7).
 - **The team's own segments** of PHerc0800 and PHerc1447 (20 of 21; 1 held back from this release for further checks), run through all 14 released checkpoints and averaged, show the same: blobs, bright rims around holes in the mesh and responses on onion-ring artifacts (see *Validation*), no rows (row scores 2.5–23.1).
 - **The pipeline does find text where there is text.** Held-out PHerc0139 segments, never seen by the models, give clear rows (row scores 73–148, rows every 4.9 mm). So these negatives say something about the models on these scrolls, not about a broken setup.
 - **Most automatic patches do not follow a single sheet** for long near the compressed core: their renders show layer-crossing swirls. Hand refinement in VC3D, as the team's workflow recommends, is the obvious next step for any region worth a closer look.
@@ -116,11 +116,16 @@ A 20-generation test patch with the default seed (PHerc0343, 0.42 cm²) took 3 m
 | PHerc0175A | v3 z 0.5, r 0.7 | 11.7 | follows the sheet throughout (crosshatch) | speckle in both directions; no rows, no letter-like shapes | 13.0 | [view](results/sheets/v3_PHerc0175A_s7.jpg) |
 | PHerc0175B | v1 z 0.4, r 0.6 | 14.1 | on-sheet band across the middle, swirls elsewhere | speckle; one ~1 mm ring in both directions (not direction-specific); no rows, no letter-like shapes | 10.7 | [view](results/sheets/v1_PHerc0175B_s1.jpg) |
 | PHerc0175B | v2 z 0.4, r 0.35 | 15.4 | layer-crossing swirls | speckle in both directions; no rows, no letter-like shapes | 15.4 | [view](results/sheets/v2_PHerc0175B_s0.jpg) |
+| PHerc0175B | v3 z 0.3, r 0.5 | 14.7 | radial layer-crossing swirls | speckle in both directions; no rows, no letter-like shapes | 8.9 | [view](results/sheets/v3_PHerc0175B_s0.jpg) |
 | PHerc0175B | v3 z 0.5, r 0.7 | 15.2 | layer-crossing swirls, small on-sheet areas | speckle in both directions; no rows, no letter-like shapes | 10.5 | [view](results/sheets/v3_PHerc0175B_s9.jpg) |
 | PHerc0191 | v2 z 0.4, r 0.35 | 16.2 | swirls, small on-sheet core | speckle in both directions; no rows, no letter-like shapes | 11.1 | [view](results/sheets/v2_PHerc0191_s0.jpg) |
+| PHerc0191 | v3 z 0.3, r 0.5 | 16.9 | swirls around folds, on-sheet crosshatch in the lower corners | speckle in both directions; no rows, no letter-like shapes | 10.4 | [view](results/sheets/v3_PHerc0191_s0.jpg) |
 | PHerc0191 | v3 z 0.5, r 0.7 | 17.5 | radial swirls and gaps (layer-crossing) | speckle in both directions; no rows, no letter-like shapes | 28.7 | [view](results/sheets/v3_PHerc0191_s9.jpg) |
 | PHerc0211 | v2 z 0.4, r 0.35 | 14.3 | on-sheet core, swirls at edges | speckle in both directions; no rows, no letter-like shapes | 10.1 | [view](results/sheets/v2_PHerc0211_s0.jpg) |
+| PHerc0211 | v3 z 0.3, r 0.5 | 14.7 | follows the sheet throughout (diagonal crosshatch) | speckle in both directions; no rows, no letter-like shapes | 11.7 | [view](results/sheets/v3_PHerc0211_s0.jpg) |
+| PHerc0211 | v3 z 0.5, r 0.7 | 13.9 | escapes the papyrus into uniform material over most of the patch | uniform speckle (the models fire on the non-papyrus material too); no rows, no letter-like shapes | 19.4 | [view](results/sheets/v3_PHerc0211_s9.jpg) |
 | PHerc0257 | v2 z 0.4, r 0.35 | 16.9 | radial swirls (compressed region) | speckle in both directions; no rows, no letter-like shapes | 10.1 | [view](results/sheets/v2_PHerc0257_s0.jpg) |
+| PHerc0257 | v3 z 0.5, r 0.7 | 16.0 | escapes the papyrus into uniform material and air over most of the patch | uniform speckle on the non-papyrus material; no rows, no letter-like shapes | 12.6 | [view](results/sheets/v3_PHerc0257_s9.jpg) |
 | PHerc0268 | v2 z 0.4, r 0.35 | 14.6 | swirls and gaps | speckle in both directions; no rows, no letter-like shapes | 12.4 | [view](results/sheets/v2_PHerc0268_s0.jpg) |
 | PHerc0306B | v2 z 0.4, r 0.35 | 14.6 | radial swirls | speckle in both directions; no rows, no letter-like shapes | 9.2 | [view](results/sheets/v2_PHerc0306B_s0.jpg) |
 | PHerc0343 | v2 z 0.4, r 0.35 | 14.7 | partly on the sheet, swirls | speckle in both directions; no rows, no letter-like shapes | 12.0 | [view](results/sheets/v2_PHerc0343_s0.jpg) |
@@ -133,7 +138,9 @@ A 20-generation test patch with the default seed (PHerc0343, 0.42 cm²) took 3 m
 | PHerc0826 | v2 z 0.4, r 0.35 | 17.1 | swirls and gaps | speckle in both directions; no rows, no letter-like shapes | 22.5 | [view](results/sheets/v2_PHerc0826_s0.jpg) |
 | PHerc0846A | v2 z 0.4, r 0.35 | 15.3 | on the sheet in the centre (crosshatch), swirls around it | speckle in both directions; no rows, no letter-like shapes | 9.5 | [view](results/sheets/v2_PHerc0846A_s0.jpg) |
 | PHerc0846B | v2 z 0.4, r 0.35 | 16.0 | arcs along the layers with swirls around a compressed centre | speckle in both directions; no rows, no letter-like shapes | 20.2 | [view](results/sheets/v2_PHerc0846B_s0.jpg) |
+| PHerc1203 | v2 z 0.4, r 0.35 | 16.1 | on the sheet in one corner (crosshatch), swirls elsewhere | speckle in both directions; no rows, no letter-like shapes | 12.1 | [view](results/sheets/v2_PHerc1203_s0.jpg) |
 | PHerc1218 | v2 z 0.4, r 0.35 | 13.3 | on-sheet half, swirls | speckle in both directions; no rows, no letter-like shapes | 13.1 | [view](results/sheets/v2_PHerc1218_s0.jpg) |
+| PHerc1545 | v2 z 0.4, r 0.35 | 17.4 | layer-crossing swirls and gaps | speckle in both directions; no rows, no letter-like shapes | 15.5 | [view](results/sheets/v2_PHerc1545_s0.jpg) |
 
 **Published segments (14-checkpoint ensemble, forward):**
 
@@ -209,6 +216,9 @@ A 20-generation test patch with the default seed (PHerc0343, 0.42 cm²) took 3 m
   ([villa #1867](https://github.com/ScrollPrize/villa/issues/1867)). A negative result here is evidence about these
   models on these patches, not about whether a scroll carries ink.
 - One or two patches per scroll cover a small fraction of each scroll's surface.
+- Seeds far out (0.7 of the radius) can grow off the papyrus: 3 of the first 6 such 100-generation patches ended up
+  mostly on uniform, non-papyrus material or air (their renders show it). None of the 21 inner-seed patches or the
+  first 4 half-radius ones did; half radius is the `fls.py` default.
 
 ## Disclosure
 
