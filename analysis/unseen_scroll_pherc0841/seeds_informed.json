@@ -1,0 +1,86 @@
+[
+ {
+  "segment": "20260220213127-w00",
+  "x": 4171,
+  "y": 4200,
+  "z": 13415,
+  "mesh_point": [
+   4171.0,
+   4200.4,
+   13415.1
+  ],
+  "grid_ij": [
+   44,
+   172
+  ],
+  "jpg_rc": [
+   430,
+   1680
+  ],
+  "snap_distance_vox": 0.42,
+  "orientation": "none",
+  "orientation_iou": {
+   "none": 0.967,
+   "flipud": 0.771,
+   "fliplr": 0.773,
+   "both": 0.861
+  },
+  "text_density_peak": 0.262
+ },
+ {
+  "segment": "20260220214732-auto_grown_20260220144552896",
+  "x": 3893,
+  "y": 3690,
+  "z": 14682,
+  "mesh_point": [
+   3889.6,
+   3688.9,
+   14681.5
+  ],
+  "grid_ij": [
+   133,
+   141
+  ],
+  "jpg_rc": [
+   1296,
+   1375
+  ],
+  "snap_distance_vox": 3.61,
+  "orientation": "none",
+  "orientation_iou": {
+   "none": 0.966,
+   "flipud": 0.752,
+   "fliplr": 0.771,
+   "both": 0.763
+  },
+  "text_density_peak": 0.299
+ },
+ {
+  "segment": "20260221022814-auto_grown_20260220174252405",
+  "x": 3818,
+  "y": 3425,
+  "z": 14789,
+  "mesh_point": [
+   3812.5,
+   3430.4,
+   14789.4
+  ],
+  "grid_ij": [
+   95,
+   130
+  ],
+  "jpg_rc": [
+   924,
+   1267
+  ],
+  "snap_distance_vox": 7.73,
+  "orientation": "none",
+  "orientation_iou": {
+   "none": 0.977,
+   "flipud": 0.78,
+   "fliplr": 0.802,
+   "both": 0.841
+  },
+  "text_density_peak": 0.232
+ }
+]

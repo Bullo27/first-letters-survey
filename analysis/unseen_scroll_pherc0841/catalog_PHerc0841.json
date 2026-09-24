@@ -1,0 +1,14 @@
+{
+ "PHerc0841": {
+  "volume": "20250821151531",
+  "voxel_um": 9.366,
+  "shape_zyx": [
+   19400,
+   7703,
+   7703
+  ],
+  "scan": "PHerc0841/volumes/20250821151531-9.366um-1.2m-113keV-masked.zarr/",
+  "prediction": "PHerc0841/representations/predictions/surfaces/20250821151531-surface-20260413222639-surface-m7-L0-th0.2.zarr/",
+  "normal_grids": "PHerc0841/representations/predictions/surfaces/20250821151531-surface-20260413222639-surface-m7-L0-th0.2.normal-grids/"
+ }
+}

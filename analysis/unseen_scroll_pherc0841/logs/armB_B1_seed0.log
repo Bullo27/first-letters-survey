@@ -1,0 +1,16 @@
+# 2026-09-24T10:52:22Z /home/bullo/vesuvius-work/venv/bin/python /media/bullo/Storage/vesuvius_work/fl_survey/repo/fls.py run --scroll PHerc0841 --gens 100 --name B1_seed0 --seed-index 0
+10:52:46Z seed 0: {'zf': 0.3, 'rf': 0.5, 'angle': 0.8, 'x': 5298, 'y': 4482, 'z': 5823}
+10:53:28Z grids: 13803 slices within +-2300 voxels, 4381 fetched, 9422 cached, 0 absent, 0 failed, 41s
+11:46:28Z grow: 17.08 cm2 in 3180s -> /media/bullo/Storage/vesuvius_work/unseen_test/fls_work/patches/PHerc0841/B1_seed0/auto_grown_20260924125339227
+11:49:00Z render: 152s -> /media/bullo/Storage/vesuvius_work/unseen_test/fls_work/patches/PHerc0841/B1_seed0/surface_volume.zarr
+11:50:07Z infer ink_hybrid_3d2d-seed42_step-075000_forward.tif: 66s
+11:51:10Z infer ink_hybrid_3d2d-seed42_step-075000_reverse.tif: 63s
+11:52:14Z infer ink_hybrid_3d2d-seed43_step-020000_forward.tif: 64s
+11:53:38Z infer ink_hybrid_3d2d-seed43_step-020000_reverse.tif: 84s
+11:53:42Z ink_hybrid_3d2d-seed42_step-075000_forward.tif: {'row_score': 13.0, 'period_mm': 6.29, 'angle_deg': 135.0, 'mean_ink': 0.2359}
+11:53:42Z ink_hybrid_3d2d-seed42_step-075000_reverse.tif: {'row_score': 12.6, 'period_mm': 6.1, 'angle_deg': 121.0, 'mean_ink': 0.2349}
+11:53:42Z ink_hybrid_3d2d-seed43_step-020000_forward.tif: {'row_score': 10.5, 'period_mm': 5.03, 'angle_deg': -171.9, 'mean_ink': 0.2144}
+11:53:42Z ink_hybrid_3d2d-seed43_step-020000_reverse.tif: {'row_score': 9.3, 'period_mm': 5.85, 'angle_deg': -170.5, 'mean_ink': 0.2115}
+11:53:42Z ink_mean_forward.tif: {'row_score': 11.3, 'period_mm': 7.12, 'angle_deg': -36.9, 'mean_ink': 0.2249}
+11:53:42Z ink_mean_reverse.tif: {'row_score': 6.7, 'period_mm': 6.98, 'angle_deg': -168.7, 'mean_ink': 0.223}
+11:53:42Z done: /media/bullo/Storage/vesuvius_work/unseen_test/fls_work/patches/PHerc0841/B1_seed0

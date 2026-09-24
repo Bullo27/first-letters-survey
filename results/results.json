@@ -1610,6 +1610,69 @@
    "volume": "20250521115057",
    "voxel_um": 8.64,
    "seed": {
+    "z": 3808,
+    "y": 6980,
+    "x": 5362
+   },
+   "seed_placement": {
+    "zf": 0.3,
+    "rf": 0.5,
+    "angle": 0.8
+   },
+   "area_cm2": 11.7,
+   "grow_s": 3268,
+   "visual_qa": {
+    "surface": "follows the sheet over most of the patch (crosshatch), diagonal cracks",
+    "ink": "speckle in both directions; no rows, no letter-like shapes",
+    "public": true
+   },
+   "row_scores": {
+    "hybrid_3d2d-seed42_step-075000_forward": {
+     "score": 8.4,
+     "period_mm": 4.51,
+     "angle_deg": -164.1,
+     "mean_ink": 0.3928,
+     "p99": 1.0,
+     "frac_gt_0.5": 0.3155,
+     "valid_px": 15353106
+    },
+    "hybrid_3d2d-seed42_step-075000_reverse": {
+     "score": 11.8,
+     "period_mm": 7.74,
+     "angle_deg": -135.0,
+     "mean_ink": 0.3782,
+     "p99": 0.99,
+     "frac_gt_0.5": 0.2901,
+     "valid_px": 15353106
+    },
+    "hybrid_3d2d-seed43_step-020000_forward": {
+     "score": 9.5,
+     "period_mm": 3.32,
+     "angle_deg": -135.0,
+     "mean_ink": 0.3532,
+     "p99": 0.904,
+     "frac_gt_0.5": 0.2264,
+     "valid_px": 15353106
+    },
+    "hybrid_3d2d-seed43_step-020000_reverse": {
+     "score": 22.1,
+     "period_mm": 5.13,
+     "angle_deg": -141.3,
+     "mean_ink": 0.3208,
+     "p99": 0.873,
+     "frac_gt_0.5": 0.1767,
+     "valid_px": 15353106
+    }
+   },
+   "sheet": "results/sheets/v3_PHerc0175A_s0.jpg",
+   "tifxyz": "results/segments/PHerc0175A_v3_s0.tifxyz"
+  },
+  {
+   "pass": "v3",
+   "scroll": "PHerc0175A",
+   "volume": "20250521115057",
+   "voxel_um": 8.64,
+   "seed": {
     "z": 6367,
     "y": 7151,
     "x": 6112
@@ -2812,6 +2875,69 @@
    "volume": "20251124083638",
    "voxel_um": 8.64,
    "seed": {
+    "z": 3552,
+    "y": 5808,
+    "x": 5360
+   },
+   "seed_placement": {
+    "zf": 0.3,
+    "rf": 0.5,
+    "angle": 0.8
+   },
+   "area_cm2": 13.12,
+   "grow_s": 2334,
+   "visual_qa": {
+    "surface": "on the sheet in the upper half (crosshatch), swirls below, a mesh hole in one corner",
+    "ink": "speckle in both directions; no rows, no letter-like shapes",
+    "public": true
+   },
+   "row_scores": {
+    "hybrid_3d2d-seed42_step-075000_forward": {
+     "score": 8.0,
+     "period_mm": 6.44,
+     "angle_deg": -11.3,
+     "mean_ink": 0.2778,
+     "p99": 0.896,
+     "frac_gt_0.5": 0.1464,
+     "valid_px": 14664157
+    },
+    "hybrid_3d2d-seed42_step-075000_reverse": {
+     "score": 9.6,
+     "period_mm": 6.44,
+     "angle_deg": -101.3,
+     "mean_ink": 0.2863,
+     "p99": 0.927,
+     "frac_gt_0.5": 0.1621,
+     "valid_px": 14664157
+    },
+    "hybrid_3d2d-seed43_step-020000_forward": {
+     "score": 10.6,
+     "period_mm": 7.96,
+     "angle_deg": -104.0,
+     "mean_ink": 0.2555,
+     "p99": 0.81,
+     "frac_gt_0.5": 0.0946,
+     "valid_px": 14664157
+    },
+    "hybrid_3d2d-seed43_step-020000_reverse": {
+     "score": 9.2,
+     "period_mm": 7.96,
+     "angle_deg": -104.0,
+     "mean_ink": 0.2328,
+     "p99": 0.771,
+     "frac_gt_0.5": 0.0693,
+     "valid_px": 14664157
+    }
+   },
+   "sheet": "results/sheets/v3_PHerc0483B_s0.jpg",
+   "tifxyz": "results/segments/PHerc0483B_v3_s0.tifxyz"
+  },
+  {
+   "pass": "v3",
+   "scroll": "PHerc0483B",
+   "volume": "20251124083638",
+   "voxel_um": 8.64,
+   "seed": {
     "z": 5952,
     "y": 6240,
     "x": 5761
@@ -2875,6 +3001,69 @@
    "volume": "20250521151210",
    "voxel_um": 8.64,
    "seed": {
+    "z": 3483,
+    "y": 5669,
+    "x": 5715
+   },
+   "seed_placement": {
+    "zf": 0.3,
+    "rf": 0.5,
+    "angle": 0.8
+   },
+   "area_cm2": 15.04,
+   "grow_s": 2062,
+   "visual_qa": {
+    "surface": "radial layer-crossing swirls with mesh holes",
+    "ink": "speckle in both directions; no rows, no letter-like shapes",
+    "public": true
+   },
+   "row_scores": {
+    "hybrid_3d2d-seed42_step-075000_forward": {
+     "score": 8.7,
+     "period_mm": 3.98,
+     "angle_deg": -104.0,
+     "mean_ink": 0.305,
+     "p99": 0.959,
+     "frac_gt_0.5": 0.1782,
+     "valid_px": 14506824
+    },
+    "hybrid_3d2d-seed42_step-075000_reverse": {
+     "score": 14.4,
+     "period_mm": 2.74,
+     "angle_deg": -90.0,
+     "mean_ink": 0.302,
+     "p99": 0.959,
+     "frac_gt_0.5": 0.1782,
+     "valid_px": 14506824
+    },
+    "hybrid_3d2d-seed43_step-020000_forward": {
+     "score": 7.0,
+     "period_mm": 4.2,
+     "angle_deg": -140.2,
+     "mean_ink": 0.2298,
+     "p99": 0.802,
+     "frac_gt_0.5": 0.0669,
+     "valid_px": 14506824
+    },
+    "hybrid_3d2d-seed43_step-020000_reverse": {
+     "score": 8.2,
+     "period_mm": 3.28,
+     "angle_deg": -126.9,
+     "mean_ink": 0.2319,
+     "p99": 0.794,
+     "frac_gt_0.5": 0.066,
+     "valid_px": 14506824
+    }
+   },
+   "sheet": "results/sheets/v3_PHerc0490A_s0.jpg",
+   "tifxyz": "results/segments/PHerc0490A_v3_s0.tifxyz"
+  },
+  {
+   "pass": "v3",
+   "scroll": "PHerc0490A",
+   "volume": "20250521151210",
+   "voxel_um": 8.64,
+   "seed": {
     "z": 5856,
     "y": 5856,
     "x": 6032
@@ -2931,6 +3120,1014 @@
    },
    "sheet": "results/sheets/v3_PHerc0490A_s9.jpg",
    "tifxyz": "results/segments/PHerc0490A_v3_s9.tifxyz"
+  },
+  {
+   "pass": "v3",
+   "scroll": "PHerc0490B",
+   "volume": "20250521151215",
+   "voxel_um": 8.64,
+   "seed": {
+    "z": 3166,
+    "y": 5439,
+    "x": 5407
+   },
+   "seed_placement": {
+    "zf": 0.3,
+    "rf": 0.5,
+    "angle": 0.8
+   },
+   "area_cm2": 14.03,
+   "grow_s": 2268,
+   "visual_qa": {
+    "surface": "crosshatch on the upper left, radial layer-crossing swirls elsewhere, mesh holes on the right",
+    "ink": "speckle in both directions; no rows, no letter-like shapes",
+    "public": true
+   },
+   "row_scores": {
+    "hybrid_3d2d-seed42_step-075000_forward": {
+     "score": 8.1,
+     "period_mm": 4.64,
+     "angle_deg": -81.9,
+     "mean_ink": 0.2447,
+     "p99": 0.927,
+     "frac_gt_0.5": 0.12,
+     "valid_px": 13977173
+    },
+    "hybrid_3d2d-seed42_step-075000_reverse": {
+     "score": 5.5,
+     "period_mm": 7.74,
+     "angle_deg": -45.0,
+     "mean_ink": 0.247,
+     "p99": 0.92,
+     "frac_gt_0.5": 0.1188,
+     "valid_px": 13977173
+    },
+    "hybrid_3d2d-seed43_step-020000_forward": {
+     "score": 11.4,
+     "period_mm": 5.13,
+     "angle_deg": -51.3,
+     "mean_ink": 0.1978,
+     "p99": 0.771,
+     "frac_gt_0.5": 0.0495,
+     "valid_px": 13977173
+    },
+    "hybrid_3d2d-seed43_step-020000_reverse": {
+     "score": 7.3,
+     "period_mm": 5.63,
+     "angle_deg": -31.0,
+     "mean_ink": 0.2008,
+     "p99": 0.771,
+     "frac_gt_0.5": 0.051,
+     "valid_px": 13977173
+    }
+   },
+   "sheet": "results/sheets/v3_PHerc0490B_s0.jpg",
+   "tifxyz": "results/segments/PHerc0490B_v3_s0.tifxyz"
+  },
+  {
+   "pass": "v3",
+   "scroll": "PHerc0490B",
+   "volume": "20250521151215",
+   "voxel_um": 8.64,
+   "seed": {
+    "z": 5312,
+    "y": 5809,
+    "x": 5760
+   },
+   "seed_placement": {
+    "zf": 0.5,
+    "rf": 0.7,
+    "angle": 0.8
+   },
+   "area_cm2": 14.62,
+   "grow_s": 2413,
+   "visual_qa": {
+    "surface": "on-sheet crosshatch in the upper half, swirls and folds below",
+    "ink": "speckle in both directions; no rows, no letter-like shapes",
+    "public": true
+   },
+   "row_scores": {
+    "hybrid_3d2d-seed42_step-075000_forward": {
+     "score": 9.3,
+     "period_mm": 3.05,
+     "angle_deg": -21.8,
+     "mean_ink": 0.2416,
+     "p99": 0.88,
+     "frac_gt_0.5": 0.1118,
+     "valid_px": 15353562
+    },
+    "hybrid_3d2d-seed42_step-075000_reverse": {
+     "score": 8.4,
+     "period_mm": 7.34,
+     "angle_deg": -63.4,
+     "mean_ink": 0.2431,
+     "p99": 0.896,
+     "frac_gt_0.5": 0.1103,
+     "valid_px": 15353562
+    },
+    "hybrid_3d2d-seed43_step-020000_forward": {
+     "score": 11.8,
+     "period_mm": 7.96,
+     "angle_deg": -76.0,
+     "mean_ink": 0.2086,
+     "p99": 0.771,
+     "frac_gt_0.5": 0.0571,
+     "valid_px": 15353562
+    },
+    "hybrid_3d2d-seed43_step-020000_reverse": {
+     "score": 9.5,
+     "period_mm": 6.57,
+     "angle_deg": -90.0,
+     "mean_ink": 0.2183,
+     "p99": 0.786,
+     "frac_gt_0.5": 0.0635,
+     "valid_px": 15353562
+    }
+   },
+   "sheet": "results/sheets/v3_PHerc0490B_s9.jpg",
+   "tifxyz": "results/segments/PHerc0490B_v3_s9.tifxyz"
+  },
+  {
+   "pass": "v3",
+   "scroll": "PHerc0813",
+   "volume": "20250821151723",
+   "voxel_um": 9.362,
+   "seed": {
+    "z": 5088,
+    "y": 5264,
+    "x": 5072
+   },
+   "seed_placement": {
+    "zf": 0.3,
+    "rf": 0.5,
+    "angle": 0.8
+   },
+   "area_cm2": 17.29,
+   "grow_s": 2594,
+   "visual_qa": {
+    "surface": "radial layer-crossing swirls throughout",
+    "ink": "speckle in both directions; no rows, no letter-like shapes",
+    "public": true
+   },
+   "row_scores": {
+    "hybrid_3d2d-seed42_step-075000_forward": {
+     "score": 18.1,
+     "period_mm": 6.61,
+     "angle_deg": -111.8,
+     "mean_ink": 0.2487,
+     "p99": 0.92,
+     "frac_gt_0.5": 0.1391,
+     "valid_px": 15366357
+    },
+    "hybrid_3d2d-seed42_step-075000_reverse": {
+     "score": 33.5,
+     "period_mm": 6.61,
+     "angle_deg": -111.8,
+     "mean_ink": 0.2552,
+     "p99": 0.935,
+     "frac_gt_0.5": 0.1504,
+     "valid_px": 15366357
+    },
+    "hybrid_3d2d-seed43_step-020000_forward": {
+     "score": 7.8,
+     "period_mm": 6.61,
+     "angle_deg": -111.8,
+     "mean_ink": 0.257,
+     "p99": 0.857,
+     "frac_gt_0.5": 0.1157,
+     "valid_px": 15366357
+    },
+    "hybrid_3d2d-seed43_step-020000_reverse": {
+     "score": 15.9,
+     "period_mm": 6.61,
+     "angle_deg": -111.8,
+     "mean_ink": 0.2598,
+     "p99": 0.873,
+     "frac_gt_0.5": 0.1181,
+     "valid_px": 15366357
+    }
+   },
+   "sheet": "results/sheets/v3_PHerc0813_s0.jpg",
+   "tifxyz": "results/segments/PHerc0813_v3_s0.tifxyz"
+  },
+  {
+   "pass": "v3",
+   "scroll": "PHerc0813",
+   "volume": "20250821151723",
+   "voxel_um": 9.362,
+   "seed": {
+    "z": 8512,
+    "y": 5264,
+    "x": 6016
+   },
+   "seed_placement": {
+    "zf": 0.5,
+    "rf": 0.7,
+    "angle": 0.8
+   },
+   "area_cm2": 13.78,
+   "grow_s": 2122,
+   "visual_qa": {
+    "surface": "follows the sheet throughout (diagonal crosshatch)",
+    "ink": "speckle in both directions; no rows, no letter-like shapes",
+    "public": true
+   },
+   "row_scores": {
+    "hybrid_3d2d-seed42_step-075000_forward": {
+     "score": 6.9,
+     "period_mm": 5.62,
+     "angle_deg": -108.4,
+     "mean_ink": 0.3036,
+     "p99": 0.951,
+     "frac_gt_0.5": 0.1856,
+     "valid_px": 15366381
+    },
+    "hybrid_3d2d-seed42_step-075000_reverse": {
+     "score": 7.2,
+     "period_mm": 4.45,
+     "angle_deg": -90.0,
+     "mean_ink": 0.2822,
+     "p99": 0.912,
+     "frac_gt_0.5": 0.1536,
+     "valid_px": 15366381
+    },
+    "hybrid_3d2d-seed43_step-020000_forward": {
+     "score": 6.7,
+     "period_mm": 5.85,
+     "angle_deg": -9.5,
+     "mean_ink": 0.3097,
+     "p99": 0.841,
+     "frac_gt_0.5": 0.1513,
+     "valid_px": 15366381
+    },
+    "hybrid_3d2d-seed43_step-020000_reverse": {
+     "score": 13.2,
+     "period_mm": 5.03,
+     "angle_deg": -45.0,
+     "mean_ink": 0.2837,
+     "p99": 0.81,
+     "frac_gt_0.5": 0.1147,
+     "valid_px": 15366381
+    }
+   },
+   "sheet": "results/sheets/v3_PHerc0813_s9.jpg",
+   "tifxyz": "results/segments/PHerc0813_v3_s9.tifxyz"
+  },
+  {
+   "pass": "v3",
+   "scroll": "PHerc0826",
+   "volume": "20250821151701",
+   "voxel_um": 9.362,
+   "seed": {
+    "z": 5056,
+    "y": 4928,
+    "x": 5040
+   },
+   "seed_placement": {
+    "zf": 0.3,
+    "rf": 0.5,
+    "angle": 0.8
+   },
+   "area_cm2": 17.09,
+   "grow_s": 2611,
+   "visual_qa": {
+    "surface": "radial layer-crossing swirls throughout",
+    "ink": "speckle in both directions; no rows, no letter-like shapes",
+    "public": true
+   },
+   "row_scores": {
+    "hybrid_3d2d-seed42_step-075000_forward": {
+     "score": 7.1,
+     "period_mm": 4.14,
+     "angle_deg": -144.5,
+     "mean_ink": 0.2202,
+     "p99": 0.967,
+     "frac_gt_0.5": 0.1191,
+     "valid_px": 15366130
+    },
+    "hybrid_3d2d-seed42_step-075000_reverse": {
+     "score": 12.4,
+     "period_mm": 6.98,
+     "angle_deg": -78.7,
+     "mean_ink": 0.2131,
+     "p99": 0.927,
+     "frac_gt_0.5": 0.1109,
+     "valid_px": 15366130
+    },
+    "hybrid_3d2d-seed43_step-020000_forward": {
+     "score": 10.7,
+     "period_mm": 3.86,
+     "angle_deg": -102.5,
+     "mean_ink": 0.2167,
+     "p99": 0.857,
+     "frac_gt_0.5": 0.0833,
+     "valid_px": 15366130
+    },
+    "hybrid_3d2d-seed43_step-020000_reverse": {
+     "score": 6.2,
+     "period_mm": 3.3,
+     "angle_deg": -111.8,
+     "mean_ink": 0.2087,
+     "p99": 0.802,
+     "frac_gt_0.5": 0.0746,
+     "valid_px": 15366130
+    }
+   },
+   "sheet": "results/sheets/v3_PHerc0826_s0.jpg",
+   "tifxyz": "results/segments/PHerc0826_v3_s0.tifxyz"
+  },
+  {
+   "pass": "v3",
+   "scroll": "PHerc0826",
+   "volume": "20250821151701",
+   "voxel_um": 9.362,
+   "seed": {
+    "z": 8450,
+    "y": 4960,
+    "x": 1315
+   },
+   "seed_placement": {
+    "zf": 0.5,
+    "rf": 0.7,
+    "angle": 3.0
+   },
+   "area_cm2": 14.99,
+   "grow_s": 2505,
+   "visual_qa": {
+    "surface": "follows the sheet on the right two-thirds (crosshatch), swirls on the left",
+    "ink": "speckle in both directions; no rows, no letter-like shapes",
+    "public": true
+   },
+   "row_scores": {
+    "hybrid_3d2d-seed42_step-075000_forward": {
+     "score": 9.7,
+     "period_mm": 2.62,
+     "angle_deg": -126.0,
+     "mean_ink": 0.2072,
+     "p99": 0.92,
+     "frac_gt_0.5": 0.116,
+     "valid_px": 15310392
+    },
+    "hybrid_3d2d-seed42_step-075000_reverse": {
+     "score": 8.1,
+     "period_mm": 2.56,
+     "angle_deg": -30.3,
+     "mean_ink": 0.2193,
+     "p99": 0.951,
+     "frac_gt_0.5": 0.131,
+     "valid_px": 15310392
+    },
+    "hybrid_3d2d-seed43_step-020000_forward": {
+     "score": 9.7,
+     "period_mm": 7.12,
+     "angle_deg": -53.1,
+     "mean_ink": 0.1788,
+     "p99": 0.747,
+     "frac_gt_0.5": 0.0461,
+     "valid_px": 15310392
+    },
+    "hybrid_3d2d-seed43_step-020000_reverse": {
+     "score": 11.3,
+     "period_mm": 6.29,
+     "angle_deg": -45.0,
+     "mean_ink": 0.1999,
+     "p99": 0.802,
+     "frac_gt_0.5": 0.0629,
+     "valid_px": 15310392
+    }
+   },
+   "sheet": "results/sheets/v3_PHerc0826_s9.jpg",
+   "tifxyz": "results/segments/PHerc0826_v3_s9.tifxyz"
+  },
+  {
+   "pass": "v3",
+   "scroll": "PHerc0846A",
+   "volume": "20250728152254",
+   "voxel_um": 9.362,
+   "seed": {
+    "z": 4194,
+    "y": 4867,
+    "x": 4642
+   },
+   "seed_placement": {
+    "zf": 0.3,
+    "rf": 0.5,
+    "angle": 0.8
+   },
+   "area_cm2": 15.74,
+   "grow_s": 2907,
+   "visual_qa": {
+    "surface": "follows the sheet on the right half (crosshatch), swirls on the left",
+    "ink": "speckle in both directions; no rows, no letter-like shapes",
+    "public": true
+   },
+   "row_scores": {
+    "hybrid_3d2d-seed42_step-075000_forward": {
+     "score": 8.4,
+     "period_mm": 7.12,
+     "angle_deg": -53.1,
+     "mean_ink": 0.3098,
+     "p99": 1.0,
+     "frac_gt_0.5": 0.2202,
+     "valid_px": 15366242
+    },
+    "hybrid_3d2d-seed42_step-075000_reverse": {
+     "score": 10.4,
+     "period_mm": 6.1,
+     "angle_deg": -121.0,
+     "mean_ink": 0.2895,
+     "p99": 0.975,
+     "frac_gt_0.5": 0.1847,
+     "valid_px": 15366242
+    },
+    "hybrid_3d2d-seed43_step-020000_forward": {
+     "score": 13.5,
+     "period_mm": 7.12,
+     "angle_deg": -53.1,
+     "mean_ink": 0.2779,
+     "p99": 0.888,
+     "frac_gt_0.5": 0.1506,
+     "valid_px": 15366242
+    },
+    "hybrid_3d2d-seed43_step-020000_reverse": {
+     "score": 10.5,
+     "period_mm": 4.67,
+     "angle_deg": -66.8,
+     "mean_ink": 0.2583,
+     "p99": 0.849,
+     "frac_gt_0.5": 0.1125,
+     "valid_px": 15366242
+    }
+   },
+   "sheet": "results/sheets/v3_PHerc0846A_s0.jpg",
+   "tifxyz": "results/segments/PHerc0846A_v3_s0.tifxyz"
+  },
+  {
+   "pass": "v3",
+   "scroll": "PHerc0846A",
+   "volume": "20250728152254",
+   "voxel_um": 9.362,
+   "seed": {
+    "z": 7008,
+    "y": 4320,
+    "x": 1808
+   },
+   "seed_placement": {
+    "zf": 0.5,
+    "rf": 0.7,
+    "angle": 3.0
+   },
+   "area_cm2": 17.59,
+   "grow_s": 2636,
+   "visual_qa": {
+    "surface": "radial layer-crossing swirls, some crosshatch near the centre",
+    "ink": "speckle in both directions; no rows, no letter-like shapes",
+    "public": true
+   },
+   "row_scores": {
+    "hybrid_3d2d-seed42_step-075000_forward": {
+     "score": 11.5,
+     "period_mm": 4.67,
+     "angle_deg": -66.8,
+     "mean_ink": 0.2348,
+     "p99": 0.873,
+     "frac_gt_0.5": 0.1046,
+     "valid_px": 15366341
+    },
+    "hybrid_3d2d-seed42_step-075000_reverse": {
+     "score": 15.1,
+     "period_mm": 7.12,
+     "angle_deg": 180.0,
+     "mean_ink": 0.2394,
+     "p99": 0.896,
+     "frac_gt_0.5": 0.1129,
+     "valid_px": 15366341
+    },
+    "hybrid_3d2d-seed43_step-020000_forward": {
+     "score": 16.9,
+     "period_mm": 7.95,
+     "angle_deg": -63.4,
+     "mean_ink": 0.2158,
+     "p99": 0.763,
+     "frac_gt_0.5": 0.063,
+     "valid_px": 15366341
+    },
+    "hybrid_3d2d-seed43_step-020000_reverse": {
+     "score": 11.5,
+     "period_mm": 7.95,
+     "angle_deg": -63.4,
+     "mean_ink": 0.2132,
+     "p99": 0.794,
+     "frac_gt_0.5": 0.0646,
+     "valid_px": 15366341
+    }
+   },
+   "sheet": "results/sheets/v3_PHerc0846A_s9.jpg",
+   "tifxyz": "results/segments/PHerc0846A_v3_s9.tifxyz"
+  },
+  {
+   "pass": "v3",
+   "scroll": "PHerc0846B",
+   "volume": "20250804142305",
+   "voxel_um": 9.362,
+   "seed": {
+    "z": 4160,
+    "y": 4624,
+    "x": 1408
+   },
+   "seed_placement": {
+    "zf": 0.3,
+    "rf": 0.5,
+    "angle": 3.0
+   },
+   "area_cm2": 15.1,
+   "grow_s": 3173,
+   "visual_qa": {
+    "surface": "follows the sheet over most of the patch (diagonal crosshatch, cracks), swirls at the edges",
+    "ink": "speckle in both directions; no rows, no letter-like shapes",
+    "public": true
+   },
+   "row_scores": {
+    "hybrid_3d2d-seed42_step-075000_forward": {
+     "score": 7.5,
+     "period_mm": 2.52,
+     "angle_deg": -135.0,
+     "mean_ink": 0.288,
+     "p99": 0.92,
+     "frac_gt_0.5": 0.1573,
+     "valid_px": 15365254
+    },
+    "hybrid_3d2d-seed42_step-075000_reverse": {
+     "score": 9.2,
+     "period_mm": 7.95,
+     "angle_deg": -116.6,
+     "mean_ink": 0.2948,
+     "p99": 0.943,
+     "frac_gt_0.5": 0.1714,
+     "valid_px": 15365254
+    },
+    "hybrid_3d2d-seed43_step-020000_forward": {
+     "score": 11.8,
+     "period_mm": 5.03,
+     "angle_deg": -135.0,
+     "mean_ink": 0.2476,
+     "p99": 0.81,
+     "frac_gt_0.5": 0.088,
+     "valid_px": 15365254
+    },
+    "hybrid_3d2d-seed43_step-020000_reverse": {
+     "score": 9.9,
+     "period_mm": 5.62,
+     "angle_deg": -161.6,
+     "mean_ink": 0.2298,
+     "p99": 0.81,
+     "frac_gt_0.5": 0.0837,
+     "valid_px": 15365254
+    }
+   },
+   "sheet": "results/sheets/v3_PHerc0846B_s0.jpg",
+   "tifxyz": "results/segments/PHerc0846B_v3_s0.tifxyz"
+  },
+  {
+   "pass": "v3",
+   "scroll": "PHerc0846B",
+   "volume": "20250804142305",
+   "voxel_um": 9.362,
+   "seed": {
+    "z": 6974,
+    "y": 4531,
+    "x": 995
+   },
+   "seed_placement": {
+    "zf": 0.5,
+    "rf": 0.7,
+    "angle": 3.0
+   },
+   "area_cm2": 16.76,
+   "grow_s": 2875,
+   "visual_qa": {
+    "surface": "sheet with crosshatch and mesh holes on the upper left, swirls below",
+    "ink": "speckle in both directions with a brighter diagonal band along the holed region, the same in both directions (structural); no rows, no letter-like shapes",
+    "public": true
+   },
+   "row_scores": {
+    "hybrid_3d2d-seed42_step-075000_forward": {
+     "score": 9.3,
+     "period_mm": 7.95,
+     "angle_deg": -63.4,
+     "mean_ink": 0.2541,
+     "p99": 0.935,
+     "frac_gt_0.5": 0.1378,
+     "valid_px": 15319565
+    },
+    "hybrid_3d2d-seed42_step-075000_reverse": {
+     "score": 13.5,
+     "period_mm": 7.95,
+     "angle_deg": -63.4,
+     "mean_ink": 0.2588,
+     "p99": 0.951,
+     "frac_gt_0.5": 0.1452,
+     "valid_px": 15319565
+    },
+    "hybrid_3d2d-seed43_step-020000_forward": {
+     "score": 6.6,
+     "period_mm": 5.3,
+     "angle_deg": -153.4,
+     "mean_ink": 0.2242,
+     "p99": 0.794,
+     "frac_gt_0.5": 0.0765,
+     "valid_px": 15319565
+    },
+    "hybrid_3d2d-seed43_step-020000_reverse": {
+     "score": 17.2,
+     "period_mm": 7.12,
+     "angle_deg": -53.1,
+     "mean_ink": 0.2443,
+     "p99": 0.88,
+     "frac_gt_0.5": 0.1075,
+     "valid_px": 15319565
+    }
+   },
+   "sheet": "results/sheets/v3_PHerc0846B_s4.jpg",
+   "tifxyz": "results/segments/PHerc0846B_v3_s4.tifxyz"
+  },
+  {
+   "pass": "v3",
+   "scroll": "PHerc1203",
+   "volume": "20250820131727",
+   "voxel_um": 9.362,
+   "seed": {
+    "z": 5690,
+    "y": 4508,
+    "x": 4047
+   },
+   "seed_placement": {
+    "zf": 0.3,
+    "rf": 0.5,
+    "angle": 0.8
+   },
+   "area_cm2": 16.87,
+   "grow_s": 2949,
+   "visual_qa": {
+    "surface": "radial layer-crossing swirls throughout",
+    "ink": "speckle in both directions; no rows, no letter-like shapes",
+    "public": true
+   },
+   "row_scores": {
+    "hybrid_3d2d-seed42_step-075000_forward": {
+     "score": 8.2,
+     "period_mm": 5.03,
+     "angle_deg": -81.9,
+     "mean_ink": 0.2074,
+     "p99": 0.849,
+     "frac_gt_0.5": 0.0949,
+     "valid_px": 15366383
+    },
+    "hybrid_3d2d-seed42_step-075000_reverse": {
+     "score": 11.0,
+     "period_mm": 6.1,
+     "angle_deg": -149.0,
+     "mean_ink": 0.2113,
+     "p99": 0.865,
+     "frac_gt_0.5": 0.0988,
+     "valid_px": 15366383
+    },
+    "hybrid_3d2d-seed43_step-020000_forward": {
+     "score": 10.1,
+     "period_mm": 4.89,
+     "angle_deg": -74.1,
+     "mean_ink": 0.2109,
+     "p99": 0.81,
+     "frac_gt_0.5": 0.0707,
+     "valid_px": 15366383
+    },
+    "hybrid_3d2d-seed43_step-020000_reverse": {
+     "score": 10.4,
+     "period_mm": 7.12,
+     "angle_deg": -90.0,
+     "mean_ink": 0.2058,
+     "p99": 0.771,
+     "frac_gt_0.5": 0.0662,
+     "valid_px": 15366383
+    }
+   },
+   "sheet": "results/sheets/v3_PHerc1203_s0.jpg",
+   "tifxyz": "results/segments/PHerc1203_v3_s0.tifxyz"
+  },
+  {
+   "pass": "v3",
+   "scroll": "PHerc1203",
+   "volume": "20250820131727",
+   "voxel_um": 9.362,
+   "seed": {
+    "z": 9504,
+    "y": 4656,
+    "x": 4528
+   },
+   "seed_placement": {
+    "zf": 0.5,
+    "rf": 0.7,
+    "angle": 0.8
+   },
+   "area_cm2": 17.3,
+   "grow_s": 3467,
+   "visual_qa": {
+    "surface": "swirls on the left; escapes into a void and uniform material at the centre and lower right; mesh holes",
+    "ink": "speckle; the uniform material lights up in both directions (the models fire on non-papyrus material); no rows, no letter-like shapes",
+    "public": true
+   },
+   "row_scores": {
+    "hybrid_3d2d-seed42_step-075000_forward": {
+     "score": 21.4,
+     "period_mm": 7.12,
+     "angle_deg": -53.1,
+     "mean_ink": 0.237,
+     "p99": 0.982,
+     "frac_gt_0.5": 0.1395,
+     "valid_px": 14526005
+    },
+    "hybrid_3d2d-seed42_step-075000_reverse": {
+     "score": 24.7,
+     "period_mm": 7.12,
+     "angle_deg": -53.1,
+     "mean_ink": 0.2365,
+     "p99": 0.982,
+     "frac_gt_0.5": 0.1349,
+     "valid_px": 14526005
+    },
+    "hybrid_3d2d-seed43_step-020000_forward": {
+     "score": 12.1,
+     "period_mm": 7.95,
+     "angle_deg": -116.6,
+     "mean_ink": 0.2244,
+     "p99": 0.927,
+     "frac_gt_0.5": 0.1023,
+     "valid_px": 14526005
+    },
+    "hybrid_3d2d-seed43_step-020000_reverse": {
+     "score": 25.6,
+     "period_mm": 7.12,
+     "angle_deg": -53.1,
+     "mean_ink": 0.2429,
+     "p99": 0.935,
+     "frac_gt_0.5": 0.1243,
+     "valid_px": 14526005
+    }
+   },
+   "sheet": "results/sheets/v3_PHerc1203_s9.jpg",
+   "tifxyz": "results/segments/PHerc1203_v3_s9.tifxyz"
+  },
+  {
+   "pass": "v3",
+   "scroll": "PHerc1218",
+   "volume": "20250521120456",
+   "voxel_um": 8.64,
+   "seed": {
+    "z": 6976,
+    "y": 5024,
+    "x": 4688
+   },
+   "seed_placement": {
+    "zf": 0.3,
+    "rf": 0.5,
+    "angle": 0.8
+   },
+   "area_cm2": 13.32,
+   "grow_s": 2638,
+   "visual_qa": {
+    "surface": "follows the sheet on the left half (crosshatch), swirls on the right",
+    "ink": "speckle in both directions; no rows, no letter-like shapes",
+    "public": true
+   },
+   "row_scores": {
+    "hybrid_3d2d-seed42_step-075000_forward": {
+     "score": 6.7,
+     "period_mm": 3.98,
+     "angle_deg": -14.0,
+     "mean_ink": 0.2565,
+     "p99": 0.912,
+     "frac_gt_0.5": 0.1325,
+     "valid_px": 15366358
+    },
+    "hybrid_3d2d-seed42_step-075000_reverse": {
+     "score": 9.3,
+     "period_mm": 7.74,
+     "angle_deg": -45.0,
+     "mean_ink": 0.2648,
+     "p99": 0.935,
+     "frac_gt_0.5": 0.1432,
+     "valid_px": 15366358
+    },
+    "hybrid_3d2d-seed43_step-020000_forward": {
+     "score": 11.3,
+     "period_mm": 6.1,
+     "angle_deg": -158.2,
+     "mean_ink": 0.2266,
+     "p99": 0.786,
+     "frac_gt_0.5": 0.0748,
+     "valid_px": 15366358
+    },
+    "hybrid_3d2d-seed43_step-020000_reverse": {
+     "score": 8.3,
+     "period_mm": 4.51,
+     "angle_deg": -15.9,
+     "mean_ink": 0.2461,
+     "p99": 0.81,
+     "frac_gt_0.5": 0.0934,
+     "valid_px": 15366358
+    }
+   },
+   "sheet": "results/sheets/v3_PHerc1218_s0.jpg",
+   "tifxyz": "results/segments/PHerc1218_v3_s0.tifxyz"
+  },
+  {
+   "pass": "v3",
+   "scroll": "PHerc1218",
+   "volume": "20250521120456",
+   "voxel_um": 8.64,
+   "seed": {
+    "z": 11606,
+    "y": 4513,
+    "x": 1970
+   },
+   "seed_placement": {
+    "zf": 0.5,
+    "rf": 0.7,
+    "angle": 3.0
+   },
+   "area_cm2": 12.77,
+   "grow_s": 3477,
+   "visual_qa": {
+    "surface": "follows the sheet over most of the patch (crosshatch), a diagonal crease through the centre, swirls lower middle",
+    "ink": "speckle in both directions; no rows, no letter-like shapes",
+    "public": true
+   },
+   "row_scores": {
+    "hybrid_3d2d-seed42_step-075000_forward": {
+     "score": 14.5,
+     "period_mm": 4.31,
+     "angle_deg": -23.2,
+     "mean_ink": 0.29,
+     "p99": 0.975,
+     "frac_gt_0.5": 0.1752,
+     "valid_px": 15337352
+    },
+    "hybrid_3d2d-seed42_step-075000_reverse": {
+     "score": 9.5,
+     "period_mm": 5.13,
+     "angle_deg": -141.3,
+     "mean_ink": 0.2864,
+     "p99": 0.959,
+     "frac_gt_0.5": 0.1747,
+     "valid_px": 15337352
+    },
+    "hybrid_3d2d-seed43_step-020000_forward": {
+     "score": 6.4,
+     "period_mm": 4.31,
+     "angle_deg": -23.2,
+     "mean_ink": 0.2605,
+     "p99": 0.841,
+     "frac_gt_0.5": 0.111,
+     "valid_px": 15337352
+    },
+    "hybrid_3d2d-seed43_step-020000_reverse": {
+     "score": 9.0,
+     "period_mm": 3.56,
+     "angle_deg": -102.5,
+     "mean_ink": 0.2353,
+     "p99": 0.81,
+     "frac_gt_0.5": 0.0846,
+     "valid_px": 15337352
+    }
+   },
+   "sheet": "results/sheets/v3_PHerc1218_s7.jpg",
+   "tifxyz": "results/segments/PHerc1218_v3_s7.tifxyz"
+  },
+  {
+   "pass": "v3",
+   "scroll": "PHerc1545",
+   "volume": "20250821151648",
+   "voxel_um": 9.362,
+   "seed": {
+    "z": 6272,
+    "y": 4097,
+    "x": 4672
+   },
+   "seed_placement": {
+    "zf": 0.3,
+    "rf": 0.5,
+    "angle": 0.8
+   },
+   "area_cm2": 16.67,
+   "grow_s": 2751,
+   "visual_qa": {
+    "surface": "radial layer-crossing swirls throughout",
+    "ink": "speckle in both directions; no rows, no letter-like shapes",
+    "public": true
+   },
+   "row_scores": {
+    "hybrid_3d2d-seed42_step-075000_forward": {
+     "score": 9.3,
+     "period_mm": 3.59,
+     "angle_deg": -45.0,
+     "mean_ink": 0.2349,
+     "p99": 0.896,
+     "frac_gt_0.5": 0.1209,
+     "valid_px": 15366383
+    },
+    "hybrid_3d2d-seed42_step-075000_reverse": {
+     "score": 12.1,
+     "period_mm": 6.98,
+     "angle_deg": -78.7,
+     "mean_ink": 0.241,
+     "p99": 0.904,
+     "frac_gt_0.5": 0.1287,
+     "valid_px": 15366383
+    },
+    "hybrid_3d2d-seed43_step-020000_forward": {
+     "score": 9.8,
+     "period_mm": 7.12,
+     "angle_deg": -53.1,
+     "mean_ink": 0.2271,
+     "p99": 0.825,
+     "frac_gt_0.5": 0.0829,
+     "valid_px": 15366383
+    },
+    "hybrid_3d2d-seed43_step-020000_reverse": {
+     "score": 9.9,
+     "period_mm": 7.12,
+     "angle_deg": -90.0,
+     "mean_ink": 0.2239,
+     "p99": 0.825,
+     "frac_gt_0.5": 0.08,
+     "valid_px": 15366383
+    }
+   },
+   "sheet": "results/sheets/v3_PHerc1545_s0.jpg",
+   "tifxyz": "results/segments/PHerc1545_v3_s0.tifxyz"
+  },
+  {
+   "pass": "v3",
+   "scroll": "PHerc1545",
+   "volume": "20250821151648",
+   "voxel_um": 9.362,
+   "seed": {
+    "z": 10496,
+    "y": 4380,
+    "x": 4690
+   },
+   "seed_placement": {
+    "zf": 0.5,
+    "rf": 0.7,
+    "angle": 0.8
+   },
+   "area_cm2": 15.54,
+   "grow_s": 2808,
+   "visual_qa": {
+    "surface": "follows the sheet on the left half (crosshatch); escapes into a void and uniform material on the upper right (mesh holes)",
+    "ink": "speckle in both directions; no rows, no letter-like shapes",
+    "public": true
+   },
+   "row_scores": {
+    "hybrid_3d2d-seed42_step-075000_forward": {
+     "score": 9.5,
+     "period_mm": 2.54,
+     "angle_deg": -90.0,
+     "mean_ink": 0.2259,
+     "p99": 0.912,
+     "frac_gt_0.5": 0.109,
+     "valid_px": 14032548
+    },
+    "hybrid_3d2d-seed42_step-075000_reverse": {
+     "score": 14.8,
+     "period_mm": 4.89,
+     "angle_deg": -164.1,
+     "mean_ink": 0.204,
+     "p99": 0.857,
+     "frac_gt_0.5": 0.0874,
+     "valid_px": 14032548
+    },
+    "hybrid_3d2d-seed43_step-020000_forward": {
+     "score": 9.6,
+     "period_mm": 6.29,
+     "angle_deg": -135.0,
+     "mean_ink": 0.2006,
+     "p99": 0.818,
+     "frac_gt_0.5": 0.0673,
+     "valid_px": 14032548
+    },
+    "hybrid_3d2d-seed43_step-020000_reverse": {
+     "score": 8.0,
+     "period_mm": 7.95,
+     "angle_deg": -26.6,
+     "mean_ink": 0.1825,
+     "p99": 0.802,
+     "frac_gt_0.5": 0.051,
+     "valid_px": 14032548
+    }
+   },
+   "sheet": "results/sheets/v3_PHerc1545_s9.jpg",
+   "tifxyz": "results/segments/PHerc1545_v3_s9.tifxyz"
   }
  ],
  "published_segments": [
