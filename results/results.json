@@ -21,7 +21,8 @@
    "visual_qa": {
     "surface": "on the sheet in the centre (diagonal fiber crosshatch), swirls at edges",
     "ink": "speckle in both directions; no rows, no letter-like shapes",
-    "public": true
+    "public": true,
+    "ensemble14_both_directions": "fwd 8.3 / rev 10.5: speckle, no rows, no letters"
    },
    "row_scores": {
     "hybrid_3d2d-seed42_step-075000_forward": {
@@ -149,7 +150,8 @@
    "visual_qa": {
     "surface": "partly on the sheet, crease across",
     "ink": "speckle in both directions; no rows, no letter-like shapes",
-    "public": true
+    "public": true,
+    "ensemble14_both_directions": "fwd 9.8 / rev 9.5: speckle, no rows, no letters"
    },
    "row_scores": {
     "hybrid_3d2d-seed42_step-075000_forward": {
@@ -405,7 +407,8 @@
    "visual_qa": {
     "surface": "on-sheet core, swirls at edges",
     "ink": "speckle in both directions; no rows, no letter-like shapes",
-    "public": true
+    "public": true,
+    "ensemble14_both_directions": "fwd 14.6 (4.67 mm) / rev 6.2: forward shows short oblique strokes parallel to the fiber-gap channels of the render, not repeated in reverse; no rows, no letters (checked at full resolution)"
    },
    "row_scores": {
     "hybrid_3d2d-seed42_step-075000_forward": {
@@ -1173,7 +1176,8 @@
    "visual_qa": {
     "surface": "on the sheet in the centre (crosshatch), swirls around it",
     "ink": "speckle in both directions; no rows, no letter-like shapes",
-    "public": true
+    "public": true,
+    "ensemble14_both_directions": "fwd 9.6 / rev 7.6: speckle in both directions, no rows, no letters"
    },
    "row_scores": {
     "hybrid_3d2d-seed42_step-075000_forward": {
@@ -1365,7 +1369,8 @@
    "visual_qa": {
     "surface": "on-sheet half, swirls",
     "ink": "speckle in both directions; no rows, no letter-like shapes",
-    "public": true
+    "public": true,
+    "ensemble14_both_directions": "fwd 9.5 / rev 11.6: speckle and squiggles in both directions, no rows, no letters"
    },
    "row_scores": {
     "hybrid_3d2d-seed42_step-075000_forward": {
@@ -1492,7 +1497,8 @@
    "visual_qa": {
     "surface": "follows the sheet throughout (crosshatch, cracks)",
     "ink": "speckle in both directions; no rows, no letter-like shapes",
-    "public": true
+    "public": true,
+    "ensemble14_both_directions": "fwd 8.1 / rev 10.0: speckle, no rows, no letters"
    },
    "row_scores": {
     "hybrid_3d2d-seed42_step-075000_forward": {
@@ -1618,7 +1624,8 @@
    "visual_qa": {
     "surface": "follows the sheet throughout (crosshatch)",
     "ink": "speckle in both directions; no rows, no letter-like shapes",
-    "public": true
+    "public": true,
+    "ensemble14_both_directions": "fwd 7.7 / rev 9.9: speckle and squiggles, no rows, no letters"
    },
    "row_scores": {
     "hybrid_3d2d-seed42_step-075000_forward": {
@@ -1870,7 +1877,8 @@
    "visual_qa": {
     "surface": "radial swirls and gaps (layer-crossing)",
     "ink": "speckle in both directions; no rows, no letter-like shapes",
-    "public": true
+    "public": true,
+    "note": "highest single-checkpoint row score of the survey: seed43/20k forward 28.7 at 5.85 mm, from broad bands following the layer-crossing swirls; the other three maps score 7.2-9.2; no letter-like shapes (checked at 640 px)"
    },
    "row_scores": {
     "hybrid_3d2d-seed42_step-075000_forward": {
@@ -2045,6 +2053,69 @@
    "volume": "20250821151750",
    "voxel_um": 9.362,
    "seed": {
+    "z": 5664,
+    "y": 5680,
+    "x": 5280
+   },
+   "seed_placement": {
+    "zf": 0.3,
+    "rf": 0.5,
+    "angle": 0.8
+   },
+   "area_cm2": 16.23,
+   "grow_s": 2995,
+   "visual_qa": {
+    "surface": "radial layer-crossing swirls with some faint crosshatch",
+    "ink": "speckle in both directions; no rows, no letter-like shapes",
+    "public": true
+   },
+   "row_scores": {
+    "hybrid_3d2d-seed42_step-075000_forward": {
+     "score": 10.9,
+     "period_mm": 6.98,
+     "angle_deg": -11.3,
+     "mean_ink": 0.2535,
+     "p99": 0.912,
+     "frac_gt_0.5": 0.1242,
+     "valid_px": 15366362
+    },
+    "hybrid_3d2d-seed42_step-075000_reverse": {
+     "score": 8.2,
+     "period_mm": 2.95,
+     "angle_deg": -138.4,
+     "mean_ink": 0.2561,
+     "p99": 0.888,
+     "frac_gt_0.5": 0.13,
+     "valid_px": 15366362
+    },
+    "hybrid_3d2d-seed43_step-020000_forward": {
+     "score": 7.9,
+     "period_mm": 4.16,
+     "angle_deg": -159.4,
+     "mean_ink": 0.2284,
+     "p99": 0.802,
+     "frac_gt_0.5": 0.0747,
+     "valid_px": 15366362
+    },
+    "hybrid_3d2d-seed43_step-020000_reverse": {
+     "score": 8.1,
+     "period_mm": 6.61,
+     "angle_deg": -158.2,
+     "mean_ink": 0.2265,
+     "p99": 0.802,
+     "frac_gt_0.5": 0.0748,
+     "valid_px": 15366362
+    }
+   },
+   "sheet": "results/sheets/v3_PHerc0257_s0.jpg",
+   "tifxyz": "results/segments/PHerc0257_v3_s0.tifxyz"
+  },
+  {
+   "pass": "v3",
+   "scroll": "PHerc0257",
+   "volume": "20250821151750",
+   "voxel_um": 9.362,
+   "seed": {
     "z": 9440,
     "y": 5328,
     "x": 5360
@@ -2101,6 +2172,258 @@
    },
    "sheet": "results/sheets/v3_PHerc0257_s9.jpg",
    "tifxyz": "results/segments/PHerc0257_v3_s9.tifxyz"
+  },
+  {
+   "pass": "v3",
+   "scroll": "PHerc0268",
+   "volume": "20251110183117",
+   "voxel_um": 8.64,
+   "seed": {
+    "z": 4452,
+    "y": 8016,
+    "x": 7900
+   },
+   "seed_placement": {
+    "zf": 0.3,
+    "rf": 0.5,
+    "angle": 0.8
+   },
+   "area_cm2": 14.97,
+   "grow_s": 2390,
+   "visual_qa": {
+    "surface": "radial layer-crossing swirls (compressed region)",
+    "ink": "speckle in both directions; no rows, no letter-like shapes",
+    "public": true
+   },
+   "row_scores": {
+    "hybrid_3d2d-seed42_step-075000_forward": {
+     "score": 11.4,
+     "period_mm": 7.96,
+     "angle_deg": -104.0,
+     "mean_ink": 0.2649,
+     "p99": 0.927,
+     "frac_gt_0.5": 0.1245,
+     "valid_px": 15366400
+    },
+    "hybrid_3d2d-seed42_step-075000_reverse": {
+     "score": 10.2,
+     "period_mm": 3.09,
+     "angle_deg": -131.2,
+     "mean_ink": 0.2644,
+     "p99": 0.92,
+     "frac_gt_0.5": 0.126,
+     "valid_px": 15366400
+    },
+    "hybrid_3d2d-seed43_step-020000_forward": {
+     "score": 9.1,
+     "period_mm": 7.34,
+     "angle_deg": -63.4,
+     "mean_ink": 0.225,
+     "p99": 0.786,
+     "frac_gt_0.5": 0.0624,
+     "valid_px": 15366400
+    },
+    "hybrid_3d2d-seed43_step-020000_reverse": {
+     "score": 10.0,
+     "period_mm": 7.96,
+     "angle_deg": -104.0,
+     "mean_ink": 0.2191,
+     "p99": 0.794,
+     "frac_gt_0.5": 0.0573,
+     "valid_px": 15366400
+    }
+   },
+   "sheet": "results/sheets/v3_PHerc0268_s0.jpg",
+   "tifxyz": "results/segments/PHerc0268_v3_s0.tifxyz"
+  },
+  {
+   "pass": "v3",
+   "scroll": "PHerc0268",
+   "volume": "20251110183117",
+   "voxel_um": 8.64,
+   "seed": {
+    "z": 7424,
+    "y": 8401,
+    "x": 8560
+   },
+   "seed_placement": {
+    "zf": 0.5,
+    "rf": 0.7,
+    "angle": 0.8
+   },
+   "area_cm2": 15.67,
+   "grow_s": 2294,
+   "visual_qa": {
+    "surface": "radial layer-crossing swirls (compressed region)",
+    "ink": "speckle in both directions; no rows, no letter-like shapes",
+    "public": true
+   },
+   "row_scores": {
+    "hybrid_3d2d-seed42_step-075000_forward": {
+     "score": 13.6,
+     "period_mm": 7.74,
+     "angle_deg": -135.0,
+     "mean_ink": 0.2705,
+     "p99": 0.927,
+     "frac_gt_0.5": 0.1447,
+     "valid_px": 15366382
+    },
+    "hybrid_3d2d-seed42_step-075000_reverse": {
+     "score": 12.5,
+     "period_mm": 7.34,
+     "angle_deg": -153.4,
+     "mean_ink": 0.2721,
+     "p99": 0.927,
+     "frac_gt_0.5": 0.1414,
+     "valid_px": 15366382
+    },
+    "hybrid_3d2d-seed43_step-020000_forward": {
+     "score": 7.7,
+     "period_mm": 5.13,
+     "angle_deg": -38.7,
+     "mean_ink": 0.2323,
+     "p99": 0.771,
+     "frac_gt_0.5": 0.0662,
+     "valid_px": 15366382
+    },
+    "hybrid_3d2d-seed43_step-020000_reverse": {
+     "score": 9.5,
+     "period_mm": 7.34,
+     "angle_deg": -153.4,
+     "mean_ink": 0.2332,
+     "p99": 0.786,
+     "frac_gt_0.5": 0.0669,
+     "valid_px": 15366382
+    }
+   },
+   "sheet": "results/sheets/v3_PHerc0268_s9.jpg",
+   "tifxyz": "results/segments/PHerc0268_v3_s9.tifxyz"
+  },
+  {
+   "pass": "v3",
+   "scroll": "PHerc0306B",
+   "volume": "20250521133212",
+   "voxel_um": 8.64,
+   "seed": {
+    "z": 7935,
+    "y": 5887,
+    "x": 6032
+   },
+   "seed_placement": {
+    "zf": 0.5,
+    "rf": 0.7,
+    "angle": 0.8
+   },
+   "area_cm2": 11.93,
+   "grow_s": 2391,
+   "visual_qa": {
+    "surface": "follows the sheet throughout (crosshatch, cracks)",
+    "ink": "speckle in both directions; no rows, no letter-like shapes",
+    "public": true
+   },
+   "row_scores": {
+    "hybrid_3d2d-seed42_step-075000_forward": {
+     "score": 7.5,
+     "period_mm": 2.69,
+     "angle_deg": -125.0,
+     "mean_ink": 0.2457,
+     "p99": 0.904,
+     "frac_gt_0.5": 0.1129,
+     "valid_px": 15244109
+    },
+    "hybrid_3d2d-seed42_step-075000_reverse": {
+     "score": 9.8,
+     "period_mm": 3.56,
+     "angle_deg": -49.4,
+     "mean_ink": 0.2453,
+     "p99": 0.896,
+     "frac_gt_0.5": 0.1122,
+     "valid_px": 15244109
+    },
+    "hybrid_3d2d-seed43_step-020000_forward": {
+     "score": 7.8,
+     "period_mm": 5.63,
+     "angle_deg": -121.0,
+     "mean_ink": 0.2423,
+     "p99": 0.81,
+     "frac_gt_0.5": 0.0796,
+     "valid_px": 15244109
+    },
+    "hybrid_3d2d-seed43_step-020000_reverse": {
+     "score": 8.3,
+     "period_mm": 6.44,
+     "angle_deg": -168.7,
+     "mean_ink": 0.2197,
+     "p99": 0.731,
+     "frac_gt_0.5": 0.0539,
+     "valid_px": 15244109
+    }
+   },
+   "sheet": "results/sheets/v3_PHerc0306B_s9.jpg",
+   "tifxyz": "results/segments/PHerc0306B_v3_s9.tifxyz"
+  },
+  {
+   "pass": "v3",
+   "scroll": "PHerc0343",
+   "volume": "20250521140437",
+   "voxel_um": 8.64,
+   "seed": {
+    "z": 8992,
+    "y": 6349,
+    "x": 6431
+   },
+   "seed_placement": {
+    "zf": 0.5,
+    "rf": 0.7,
+    "angle": 0.8
+   },
+   "area_cm2": 12.63,
+   "grow_s": 2318,
+   "visual_qa": {
+    "surface": "follows the sheet over most of the patch (crosshatch); one corner reaches air and uniform material",
+    "ink": "speckle in both directions; no rows, no letter-like shapes",
+    "public": true
+   },
+   "row_scores": {
+    "hybrid_3d2d-seed42_step-075000_forward": {
+     "score": 9.5,
+     "period_mm": 4.2,
+     "angle_deg": -50.2,
+     "mean_ink": 0.3532,
+     "p99": 0.975,
+     "frac_gt_0.5": 0.2677,
+     "valid_px": 13124253
+    },
+    "hybrid_3d2d-seed42_step-075000_reverse": {
+     "score": 8.8,
+     "period_mm": 5.4,
+     "angle_deg": -99.5,
+     "mean_ink": 0.3565,
+     "p99": 0.99,
+     "frac_gt_0.5": 0.273,
+     "valid_px": 13124253
+    },
+    "hybrid_3d2d-seed43_step-020000_forward": {
+     "score": 10.8,
+     "period_mm": 3.48,
+     "angle_deg": -58.0,
+     "mean_ink": 0.3112,
+     "p99": 0.88,
+     "frac_gt_0.5": 0.1775,
+     "valid_px": 13124253
+    },
+    "hybrid_3d2d-seed43_step-020000_reverse": {
+     "score": 11.5,
+     "period_mm": 7.96,
+     "angle_deg": -166.0,
+     "mean_ink": 0.3537,
+     "p99": 0.92,
+     "frac_gt_0.5": 0.2393,
+     "valid_px": 13124253
+    }
+   },
+   "sheet": "results/sheets/v3_PHerc0343_s9.jpg",
+   "tifxyz": "results/segments/PHerc0343_v3_s9.tifxyz"
   }
  ],
  "published_segments": [
