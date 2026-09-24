@@ -7,12 +7,12 @@ at native resolution, run through [`scrollprize/ink_9um`](https://huggingface.co
 depth directions, and checked by eye. Everything streams from the open-data bucket. The whole survey ran on one
 machine: an RTX 3060 (12 GB), a 14-core Xeon and a home Wi-Fi link.
 
-> Status: <!-- STATUS -->42 patches (624 cm²) on 21 of the 21 eligible scrolls without catalog segments, and 20 of the team's published segments, as of 2026-09-24 03:58Z. The survey is still running and this page is regenerated as patches finish.<!-- /STATUS -->
+> Status: <!-- STATUS -->46 patches (682 cm²) on 21 of the 21 eligible scrolls without catalog segments, and 20 of the team's published segments, as of 2026-09-24 05:25Z. The survey is still running and this page is regenerated as patches finish.<!-- /STATUS -->
 
 ## Summary
 
 <!-- SUMMARY -->
-- **No letter-like ink anywhere so far.** On 42 automatically grown patches (624 cm² in total) the two checkpoints give speckle in both depth directions: no rows and no letter shapes (row scores 8.0–28.7).
+- **No letter-like ink anywhere so far.** On 46 automatically grown patches (682 cm² in total) the two checkpoints give speckle in both depth directions: no rows and no letter shapes (row scores 8.0–28.7).
 - **All 14 released checkpoints, averaged, in both directions** on 10 patches whose renders show the sheet over large areas: still no letters (row scores 5.6–16.9; every map checked by eye).
 - **The team's own segments** of PHerc0800 and PHerc1447 (20 of 21; 1 held back from this release for further checks), run through all 14 released checkpoints and averaged, show the same: blobs, bright rims around holes in the mesh and responses on onion-ring artifacts (see *Validation*), no rows (row scores 2.5–23.1).
 - **The pipeline does find text where there is text.** Held-out PHerc0139 segments, never seen by the models, give clear rows (row scores 73–148, rows every 4.9 mm). So these negatives say something about the models on these scrolls, not about a broken setup.
@@ -24,7 +24,7 @@ machine: an RTX 3060 (12 GB), a 14-core Xeon and a home Wi-Fi link.
 `fls.py` goes from an eligible scroll to ink maps on a freshly grown patch in one command.
 
 ```bash
-# Needs: vc_grow_seg_from_seed and vc_render_tifxyz from a villa build, the `vesuvius` Python package
+# Needs: vc_grow_seg_from_seed and vc_render_tifxyz built from current villa main, the `vesuvius` Python package
 # (villa/vesuvius) with zarr, s3fs, opencv-python and tifffile, and a CUDA GPU.
 export VC_BIN=~/villa/build/bin FLS_WORK=~/fls_work
 python fls.py seeds --scroll PHerc1218            # candidate seeds, all inside the scan mask
@@ -39,6 +39,10 @@ default checkpoints score 84 and 111 alone and 125 averaged. `--ckpts all` runs 
 w045), at seven times the inference cost. Steps whose output exists are skipped, so an interrupted run resumes. Checkpoints are downloaded from
 Hugging Face on first use. `FLS_NO_CUDNN=1` disables cuDNN for inference; that was needed here because of a cuDNN
 sub-library mismatch in the local PyTorch install.
+
+Build the tools from current villa main: the published container image `ghcr.io/scrollprize/villa/volume-cartographer:main`
+is built from 2026-05-13 source (1e3f4c021), whose `vc_render_tifxyz` has no `--flip-normals`, which `fls.py`
+passes ([villa #1588](https://github.com/ScrollPrize/villa/issues/1588), where bnleft hit exactly this).
 
 The tracer and the renderer cache the chunks they stream (surface prediction and scan) in VC3D's remote cache,
 `~/.VC3D/remote_cache` by default, and this adds up to gigabytes. To put it on a bigger disk, point
@@ -57,7 +61,8 @@ A 20-generation test patch with the default seed (PHerc0343, 0.42 cm²) took 3 m
 - `results/sheets/`: one contact sheet per item (render middle layer and ink maps).
 - `results/segments/`: the grown patches in tifxyz, volume-cartographer's surface format, for re-rendering with
   `vc_render_tifxyz` or as a starting point for refinement.
-- `analysis/`: `rowscore.py` and `tile_scores.py` (the triage score), `census_outside_mask.py` (the census).
+- `analysis/`: `rowscore.py` and `tile_scores.py` (the triage score), `census_outside_mask.py` (the census),
+  `slab_profile.py` and `recenter.py` (the slab-centring check and the re-centring test).
 
 ## Method
 
@@ -96,6 +101,16 @@ A 20-generation test patch with the default seed (PHerc0343, 0.42 cm²) took 3 m
   Greek text, and so do ours:
 
   ![Held-out PHerc0139 segments show rows of letters; a survey patch that follows its sheet shows speckle](results/figures/controls_vs_survey.jpg)
+- **Slab centring.** bnleft's check from [First Light, PHerc. 0211](https://github.com/bnleft/first-light-pherc0211)
+  counts the 256 px tiles whose brightness peak lies in the middle third of the rendered slab. The held-out and
+  training controls score 55–87 %; our patches that follow their sheet score 27–46 % (median 34 %), and patches that
+  cross layers 21–34 %. To test whether this hides ink, we re-rendered 48 layers and moved each 64 px tile's
+  brightness peak to layer 12 (the controls' median). That lifts our best on-sheet patch (PHerc0175A, v3 seed 7) from
+  40 % to 70 %, and its ink maps stay speckle. But the same step weakens real text on both held-out controls: the
+  forward row score of the two-checkpoint mean falls from 71.4 to 44.7 on w033 and from 125.1 to 104.9 on w045
+  (rows still found). The ink sits on the sheet's surface, not at its brightness peak, so re-centring on brightness
+  is not a fix, and fewer detections after it are expected even where there is ink. Our patches' lower centring
+  share may still mean their surfaces wander off the papyrus face; we have not measured that directly.
 - **Two artifacts to recognize.** On the team's PHerc1447 segments the models light up where the surface cuts through
   bumps in the layers (the concentric "onion rings" in the render) and along the rims of holes in the mesh. Both can
   look like curved strokes; the render shows where they come from:
@@ -140,11 +155,15 @@ A 20-generation test patch with the default seed (PHerc0343, 0.42 cm²) took 3 m
 | PHerc0343 | v3 z 0.3, r 0.5 | 14.0 | swirls through the middle, on-sheet crosshatch in the corners | speckle in both directions; no rows, no letter-like shapes | 12.7 | [view](results/sheets/v3_PHerc0343_s0.jpg) |
 | PHerc0343 | v3 z 0.5, r 0.7 | 12.6 | follows the sheet over most of the patch (crosshatch); one corner reaches air and uniform material | speckle in both directions; no rows, no letter-like shapes | 11.5 | [view](results/sheets/v3_PHerc0343_s9.jpg) |
 | PHerc0358 | v2 z 0.4, r 0.35 | 15.7 | partly on the sheet, swirls | speckle in both directions; no rows, no letter-like shapes | 15.0 | [view](results/sheets/v2_PHerc0358_s0.jpg) |
+| PHerc0358 | v3 z 0.3, r 0.5 | 16.0 | on-sheet crosshatch in places, swirls and a dark fold | speckle in both directions; no rows, no letter-like shapes | 10.7 | [view](results/sheets/v3_PHerc0358_s0.jpg) |
 | PHerc0358 | v3 z 0.5, r 0.7 | 17.1 | radial layer-crossing swirls | speckle in both directions; no rows, no letter-like shapes | 11.5 | [view](results/sheets/v3_PHerc0358_s7.jpg) |
 | PHerc0483A | v2 z 0.4, r 0.35 | 13.1 | partly on the sheet, swirls | speckle in both directions; no rows, no letter-like shapes | 15.4 | [view](results/sheets/v2_PHerc0483A_s0.jpg) |
+| PHerc0483A | v3 z 0.3, r 0.5 | 12.8 | follows the sheet over most of the patch (crosshatch), swirls in one corner | speckle in both directions; no rows, no letter-like shapes | 12.8 | [view](results/sheets/v3_PHerc0483A_s0.jpg) |
 | PHerc0483A | v3 z 0.5, r 0.7 | 13.0 | on the sheet over most of the patch (diagonal crosshatch), swirls in one corner | speckle in both directions; no rows, no letter-like shapes | 9.7 | [view](results/sheets/v3_PHerc0483A_s8.jpg) |
 | PHerc0483B | v2 z 0.4, r 0.35 | 14.3 | radial swirls (layer-crossing near the core) | speckle in both directions; no rows, no letter-like shapes | 12.3 | [view](results/sheets/v2_PHerc0483B_s0.jpg) |
+| PHerc0483B | v3 z 0.5, r 0.7 | 14.7 | radial layer-crossing swirls | speckle in both directions; no rows, no letter-like shapes | 11.4 | [view](results/sheets/v3_PHerc0483B_s8.jpg) |
 | PHerc0490A | v2 z 0.4, r 0.35 | 14.6 | radial swirls | speckle in both directions; no rows, no letter-like shapes | 8.8 | [view](results/sheets/v2_PHerc0490A_s0.jpg) |
+| PHerc0490A | v3 z 0.5, r 0.7 | 14.2 | swirls and mesh holes, on-sheet crosshatch in the centre | speckle in both directions; no rows, no letter-like shapes | 13.6 | [view](results/sheets/v3_PHerc0490A_s9.jpg) |
 | PHerc0490B | v2 z 0.4, r 0.35 | 15.0 | swirls and dark gaps | speckle in both directions; no rows, no letter-like shapes | 11.6 | [view](results/sheets/v2_PHerc0490B_s0.jpg) |
 | PHerc0813 | v2 z 0.4, r 0.35 | 16.2 | on-sheet band across the middle, swirls around it | speckle in both directions; no rows, no letter-like shapes | 11.8 | [view](results/sheets/v2_PHerc0813_s0.jpg) |
 | PHerc0826 | v2 z 0.4, r 0.35 | 17.1 | swirls and gaps | speckle in both directions; no rows, no letter-like shapes | 22.5 | [view](results/sheets/v2_PHerc0826_s0.jpg) |
@@ -216,6 +235,10 @@ A 20-generation test patch with the default seed (PHerc0343, 0.42 cm²) took 3 m
 - [vesuvius-automesh](https://github.com/spencerdavis-tx/vesuvius-automesh) (spencerdavis-tx) harvests surface
   automatically on Scroll 3: it masks the predictions against the CT, sweeps tracer seeds and accepts output through a
   quality gate. That is a far more careful meshing pipeline than the single grown patch per seed used here.
+- [First Light, PHerc. 0211](https://github.com/bnleft/first-light-pherc0211) (bnleft) runs the team's spiral-fit
+  workflow end to end on PHerc0211 with a preregistered readout, sees no ink, and adds a slab-centring check
+  (is the papyrus brightness peak in the middle of the rendered slab?) that we then ran on our patches too
+  (see *Limitations*).
 - [villa #1872](https://github.com/ScrollPrize/villa/pull/1872) (Danishk2445) proposes an inference sweep over
   checkpoints, depth windows and directions.
 

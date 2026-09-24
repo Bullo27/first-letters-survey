@@ -2560,6 +2560,69 @@
    "volume": "20250821151737",
    "voxel_um": 9.362,
    "seed": {
+    "z": 4416,
+    "y": 5008,
+    "x": 4768
+   },
+   "seed_placement": {
+    "zf": 0.3,
+    "rf": 0.5,
+    "angle": 0.8
+   },
+   "area_cm2": 16.0,
+   "grow_s": 3130,
+   "visual_qa": {
+    "surface": "on-sheet crosshatch in places, swirls and a dark fold",
+    "ink": "speckle in both directions; no rows, no letter-like shapes",
+    "public": true
+   },
+   "row_scores": {
+    "hybrid_3d2d-seed42_step-075000_forward": {
+     "score": 9.4,
+     "period_mm": 5.56,
+     "angle_deg": -128.7,
+     "mean_ink": 0.2759,
+     "p99": 0.943,
+     "frac_gt_0.5": 0.1712,
+     "valid_px": 15366076
+    },
+    "hybrid_3d2d-seed42_step-075000_reverse": {
+     "score": 10.6,
+     "period_mm": 4.14,
+     "angle_deg": -35.5,
+     "mean_ink": 0.2812,
+     "p99": 0.959,
+     "frac_gt_0.5": 0.179,
+     "valid_px": 15366076
+    },
+    "hybrid_3d2d-seed43_step-020000_forward": {
+     "score": 10.7,
+     "period_mm": 4.89,
+     "angle_deg": -15.9,
+     "mean_ink": 0.2718,
+     "p99": 0.841,
+     "frac_gt_0.5": 0.1296,
+     "valid_px": 15366076
+    },
+    "hybrid_3d2d-seed43_step-020000_reverse": {
+     "score": 9.8,
+     "period_mm": 4.55,
+     "angle_deg": -39.8,
+     "mean_ink": 0.2882,
+     "p99": 0.873,
+     "frac_gt_0.5": 0.156,
+     "valid_px": 15366076
+    }
+   },
+   "sheet": "results/sheets/v3_PHerc0358_s0.jpg",
+   "tifxyz": "results/segments/PHerc0358_v3_s0.tifxyz"
+  },
+  {
+   "pass": "v3",
+   "scroll": "PHerc0358",
+   "volume": "20250821151737",
+   "voxel_um": 9.362,
+   "seed": {
     "z": 7360,
     "y": 5600,
     "x": 5600
@@ -2623,6 +2686,69 @@
    "volume": "20250521140913",
    "voxel_um": 8.64,
    "seed": {
+    "z": 4768,
+    "y": 5552,
+    "x": 5216
+   },
+   "seed_placement": {
+    "zf": 0.3,
+    "rf": 0.5,
+    "angle": 0.8
+   },
+   "area_cm2": 12.84,
+   "grow_s": 2861,
+   "visual_qa": {
+    "surface": "follows the sheet over most of the patch (crosshatch), swirls in one corner",
+    "ink": "speckle in both directions; no rows, no letter-like shapes",
+    "public": true
+   },
+   "row_scores": {
+    "hybrid_3d2d-seed42_step-075000_forward": {
+     "score": 8.8,
+     "period_mm": 4.51,
+     "angle_deg": -105.9,
+     "mean_ink": 0.1631,
+     "p99": 0.865,
+     "frac_gt_0.5": 0.0666,
+     "valid_px": 15366375
+    },
+    "hybrid_3d2d-seed42_step-075000_reverse": {
+     "score": 12.8,
+     "period_mm": 6.57,
+     "angle_deg": -90.0,
+     "mean_ink": 0.155,
+     "p99": 0.818,
+     "frac_gt_0.5": 0.0565,
+     "valid_px": 15366375
+    },
+    "hybrid_3d2d-seed43_step-020000_forward": {
+     "score": 9.9,
+     "period_mm": 3.98,
+     "angle_deg": -14.0,
+     "mean_ink": 0.1638,
+     "p99": 0.692,
+     "frac_gt_0.5": 0.0372,
+     "valid_px": 15366375
+    },
+    "hybrid_3d2d-seed43_step-020000_reverse": {
+     "score": 10.2,
+     "period_mm": 7.34,
+     "angle_deg": -116.6,
+     "mean_ink": 0.1519,
+     "p99": 0.661,
+     "frac_gt_0.5": 0.0281,
+     "valid_px": 15366375
+    }
+   },
+   "sheet": "results/sheets/v3_PHerc0483A_s0.jpg",
+   "tifxyz": "results/segments/PHerc0483A_v3_s0.tifxyz"
+  },
+  {
+   "pass": "v3",
+   "scroll": "PHerc0483A",
+   "volume": "20250521140913",
+   "voxel_um": 8.64,
+   "seed": {
     "z": 7935,
     "y": 4579,
     "x": 2608
@@ -2679,6 +2805,132 @@
    },
    "sheet": "results/sheets/v3_PHerc0483A_s8.jpg",
    "tifxyz": "results/segments/PHerc0483A_v3_s8.tifxyz"
+  },
+  {
+   "pass": "v3",
+   "scroll": "PHerc0483B",
+   "volume": "20251124083638",
+   "voxel_um": 8.64,
+   "seed": {
+    "z": 5952,
+    "y": 6240,
+    "x": 5761
+   },
+   "seed_placement": {
+    "zf": 0.5,
+    "rf": 0.7,
+    "angle": 0.8
+   },
+   "area_cm2": 14.67,
+   "grow_s": 2618,
+   "visual_qa": {
+    "surface": "radial layer-crossing swirls",
+    "ink": "speckle in both directions; no rows, no letter-like shapes",
+    "public": true
+   },
+   "row_scores": {
+    "hybrid_3d2d-seed42_step-075000_forward": {
+     "score": 11.4,
+     "period_mm": 3.67,
+     "angle_deg": -116.6,
+     "mean_ink": 0.2348,
+     "p99": 0.873,
+     "frac_gt_0.5": 0.1147,
+     "valid_px": 15366321
+    },
+    "hybrid_3d2d-seed42_step-075000_reverse": {
+     "score": 5.8,
+     "period_mm": 3.22,
+     "angle_deg": -101.3,
+     "mean_ink": 0.244,
+     "p99": 0.888,
+     "frac_gt_0.5": 0.1215,
+     "valid_px": 15366321
+    },
+    "hybrid_3d2d-seed43_step-020000_forward": {
+     "score": 8.9,
+     "period_mm": 2.58,
+     "angle_deg": -135.0,
+     "mean_ink": 0.217,
+     "p99": 0.778,
+     "frac_gt_0.5": 0.0641,
+     "valid_px": 15366321
+    },
+    "hybrid_3d2d-seed43_step-020000_reverse": {
+     "score": 5.4,
+     "period_mm": 2.9,
+     "angle_deg": -135.0,
+     "mean_ink": 0.2306,
+     "p99": 0.794,
+     "frac_gt_0.5": 0.0749,
+     "valid_px": 15366321
+    }
+   },
+   "sheet": "results/sheets/v3_PHerc0483B_s8.jpg",
+   "tifxyz": "results/segments/PHerc0483B_v3_s8.tifxyz"
+  },
+  {
+   "pass": "v3",
+   "scroll": "PHerc0490A",
+   "volume": "20250521151210",
+   "voxel_um": 8.64,
+   "seed": {
+    "z": 5856,
+    "y": 5856,
+    "x": 6032
+   },
+   "seed_placement": {
+    "zf": 0.5,
+    "rf": 0.7,
+    "angle": 0.8
+   },
+   "area_cm2": 14.24,
+   "grow_s": 2413,
+   "visual_qa": {
+    "surface": "swirls and mesh holes, on-sheet crosshatch in the centre",
+    "ink": "speckle in both directions; no rows, no letter-like shapes",
+    "public": true
+   },
+   "row_scores": {
+    "hybrid_3d2d-seed42_step-075000_forward": {
+     "score": 12.3,
+     "period_mm": 7.74,
+     "angle_deg": -135.0,
+     "mean_ink": 0.2683,
+     "p99": 0.927,
+     "frac_gt_0.5": 0.1484,
+     "valid_px": 14559788
+    },
+    "hybrid_3d2d-seed42_step-075000_reverse": {
+     "score": 13.6,
+     "period_mm": 7.34,
+     "angle_deg": -153.4,
+     "mean_ink": 0.2813,
+     "p99": 0.943,
+     "frac_gt_0.5": 0.1603,
+     "valid_px": 14559788
+    },
+    "hybrid_3d2d-seed43_step-020000_forward": {
+     "score": 9.8,
+     "period_mm": 2.94,
+     "angle_deg": -169.7,
+     "mean_ink": 0.2462,
+     "p99": 0.818,
+     "frac_gt_0.5": 0.0894,
+     "valid_px": 14559788
+    },
+    "hybrid_3d2d-seed43_step-020000_reverse": {
+     "score": 10.9,
+     "period_mm": 7.96,
+     "angle_deg": -76.0,
+     "mean_ink": 0.2496,
+     "p99": 0.825,
+     "frac_gt_0.5": 0.0979,
+     "valid_px": 14559788
+    }
+   },
+   "sheet": "results/sheets/v3_PHerc0490A_s9.jpg",
+   "tifxyz": "results/segments/PHerc0490A_v3_s9.tifxyz"
   }
  ],
  "published_segments": [
