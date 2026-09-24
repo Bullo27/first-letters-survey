@@ -7,13 +7,13 @@ at native resolution, run through [`scrollprize/ink_9um`](https://huggingface.co
 depth directions, and checked by eye. Everything streams from the open-data bucket. The whole survey ran on one
 machine: an RTX 3060 (12 GB), a 14-core Xeon and a home Wi-Fi link.
 
-> Status: <!-- STATUS -->38 patches (565 cm²) on 21 of the 21 eligible scrolls without catalog segments, and 20 of the team's published segments, as of 2026-09-24 02:24Z. The survey is still running and this page is regenerated as patches finish.<!-- /STATUS -->
+> Status: <!-- STATUS -->42 patches (624 cm²) on 21 of the 21 eligible scrolls without catalog segments, and 20 of the team's published segments, as of 2026-09-24 03:58Z. The survey is still running and this page is regenerated as patches finish.<!-- /STATUS -->
 
 ## Summary
 
 <!-- SUMMARY -->
-- **No letter-like ink anywhere so far.** On 38 automatically grown patches (565 cm² in total) the two checkpoints give speckle in both depth directions: no rows and no letter shapes (row scores 8.0–28.7).
-- **All 14 released checkpoints, averaged, in both directions** on 7 patches whose renders show the sheet over large areas: still no letters (row scores 6.2–14.6; every map checked by eye).
+- **No letter-like ink anywhere so far.** On 42 automatically grown patches (624 cm² in total) the two checkpoints give speckle in both depth directions: no rows and no letter shapes (row scores 8.0–28.7).
+- **All 14 released checkpoints, averaged, in both directions** on 10 patches whose renders show the sheet over large areas: still no letters (row scores 5.6–16.9; every map checked by eye).
 - **The team's own segments** of PHerc0800 and PHerc1447 (20 of 21; 1 held back from this release for further checks), run through all 14 released checkpoints and averaged, show the same: blobs, bright rims around holes in the mesh and responses on onion-ring artifacts (see *Validation*), no rows (row scores 2.5–23.1).
 - **The pipeline does find text where there is text.** Held-out PHerc0139 segments, never seen by the models, give clear rows (row scores 73–148, rows every 4.9 mm). So these negatives say something about the models on these scrolls, not about a broken setup.
 - **Most automatic patches do not follow a single sheet** for long near the compressed core: their renders show layer-crossing swirls. Hand refinement in VC3D, as the team's workflow recommends, is the obvious next step for any region worth a closer look.
@@ -134,11 +134,15 @@ A 20-generation test patch with the default seed (PHerc0343, 0.42 cm²) took 3 m
 | PHerc0268 | v3 z 0.3, r 0.5 | 15.0 | radial layer-crossing swirls (compressed region) | speckle in both directions; no rows, no letter-like shapes | 11.4 | [view](results/sheets/v3_PHerc0268_s0.jpg) |
 | PHerc0268 | v3 z 0.5, r 0.7 | 15.7 | radial layer-crossing swirls (compressed region) | speckle in both directions; no rows, no letter-like shapes | 13.6 | [view](results/sheets/v3_PHerc0268_s9.jpg) |
 | PHerc0306B | v2 z 0.4, r 0.35 | 14.6 | radial swirls | speckle in both directions; no rows, no letter-like shapes | 9.2 | [view](results/sheets/v2_PHerc0306B_s0.jpg) |
+| PHerc0306B | v3 z 0.3, r 0.5 | 14.6 | radial layer-crossing swirls, small on-sheet areas | speckle in both directions; no rows, no letter-like shapes | 12.7 | [view](results/sheets/v3_PHerc0306B_s0.jpg) |
 | PHerc0306B | v3 z 0.5, r 0.7 | 11.9 | follows the sheet throughout (crosshatch, cracks) | speckle in both directions; no rows, no letter-like shapes | 9.8 | [view](results/sheets/v3_PHerc0306B_s9.jpg) |
 | PHerc0343 | v2 z 0.4, r 0.35 | 14.7 | partly on the sheet, swirls | speckle in both directions; no rows, no letter-like shapes | 12.0 | [view](results/sheets/v2_PHerc0343_s0.jpg) |
+| PHerc0343 | v3 z 0.3, r 0.5 | 14.0 | swirls through the middle, on-sheet crosshatch in the corners | speckle in both directions; no rows, no letter-like shapes | 12.7 | [view](results/sheets/v3_PHerc0343_s0.jpg) |
 | PHerc0343 | v3 z 0.5, r 0.7 | 12.6 | follows the sheet over most of the patch (crosshatch); one corner reaches air and uniform material | speckle in both directions; no rows, no letter-like shapes | 11.5 | [view](results/sheets/v3_PHerc0343_s9.jpg) |
 | PHerc0358 | v2 z 0.4, r 0.35 | 15.7 | partly on the sheet, swirls | speckle in both directions; no rows, no letter-like shapes | 15.0 | [view](results/sheets/v2_PHerc0358_s0.jpg) |
+| PHerc0358 | v3 z 0.5, r 0.7 | 17.1 | radial layer-crossing swirls | speckle in both directions; no rows, no letter-like shapes | 11.5 | [view](results/sheets/v3_PHerc0358_s7.jpg) |
 | PHerc0483A | v2 z 0.4, r 0.35 | 13.1 | partly on the sheet, swirls | speckle in both directions; no rows, no letter-like shapes | 15.4 | [view](results/sheets/v2_PHerc0483A_s0.jpg) |
+| PHerc0483A | v3 z 0.5, r 0.7 | 13.0 | on the sheet over most of the patch (diagonal crosshatch), swirls in one corner | speckle in both directions; no rows, no letter-like shapes | 9.7 | [view](results/sheets/v3_PHerc0483A_s8.jpg) |
 | PHerc0483B | v2 z 0.4, r 0.35 | 14.3 | radial swirls (layer-crossing near the core) | speckle in both directions; no rows, no letter-like shapes | 12.3 | [view](results/sheets/v2_PHerc0483B_s0.jpg) |
 | PHerc0490A | v2 z 0.4, r 0.35 | 14.6 | radial swirls | speckle in both directions; no rows, no letter-like shapes | 8.8 | [view](results/sheets/v2_PHerc0490A_s0.jpg) |
 | PHerc0490B | v2 z 0.4, r 0.35 | 15.0 | swirls and dark gaps | speckle in both directions; no rows, no letter-like shapes | 11.6 | [view](results/sheets/v2_PHerc0490B_s0.jpg) |

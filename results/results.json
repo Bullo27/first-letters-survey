@@ -1941,7 +1941,8 @@
    "visual_qa": {
     "surface": "follows the sheet throughout (diagonal crosshatch)",
     "ink": "speckle in both directions; no rows, no letter-like shapes",
-    "public": true
+    "public": true,
+    "ensemble14_both_directions": "fwd 8.3 / rev 9.8: speckle with broad regions along the fold lines, no rows, no letters"
    },
    "row_scores": {
     "hybrid_3d2d-seed42_step-075000_forward": {
@@ -2305,6 +2306,69 @@
    "volume": "20250521133212",
    "voxel_um": 8.64,
    "seed": {
+    "z": 4768,
+    "y": 5472,
+    "x": 5504
+   },
+   "seed_placement": {
+    "zf": 0.3,
+    "rf": 0.5,
+    "angle": 0.8
+   },
+   "area_cm2": 14.64,
+   "grow_s": 2894,
+   "visual_qa": {
+    "surface": "radial layer-crossing swirls, small on-sheet areas",
+    "ink": "speckle in both directions; no rows, no letter-like shapes",
+    "public": true
+   },
+   "row_scores": {
+    "hybrid_3d2d-seed42_step-075000_forward": {
+     "score": 9.6,
+     "period_mm": 6.57,
+     "angle_deg": 180.0,
+     "mean_ink": 0.2559,
+     "p99": 0.896,
+     "frac_gt_0.5": 0.1359,
+     "valid_px": 15366233
+    },
+    "hybrid_3d2d-seed42_step-075000_reverse": {
+     "score": 12.7,
+     "period_mm": 7.34,
+     "angle_deg": -116.6,
+     "mean_ink": 0.2436,
+     "p99": 0.912,
+     "frac_gt_0.5": 0.1304,
+     "valid_px": 15366233
+    },
+    "hybrid_3d2d-seed43_step-020000_forward": {
+     "score": 7.5,
+     "period_mm": 3.67,
+     "angle_deg": -63.4,
+     "mean_ink": 0.2339,
+     "p99": 0.825,
+     "frac_gt_0.5": 0.0858,
+     "valid_px": 15366233
+    },
+    "hybrid_3d2d-seed43_step-020000_reverse": {
+     "score": 7.9,
+     "period_mm": 2.62,
+     "angle_deg": -151.4,
+     "mean_ink": 0.2294,
+     "p99": 0.81,
+     "frac_gt_0.5": 0.0821,
+     "valid_px": 15366233
+    }
+   },
+   "sheet": "results/sheets/v3_PHerc0306B_s0.jpg",
+   "tifxyz": "results/segments/PHerc0306B_v3_s0.tifxyz"
+  },
+  {
+   "pass": "v3",
+   "scroll": "PHerc0306B",
+   "volume": "20250521133212",
+   "voxel_um": 8.64,
+   "seed": {
     "z": 7935,
     "y": 5887,
     "x": 6032
@@ -2319,7 +2383,8 @@
    "visual_qa": {
     "surface": "follows the sheet throughout (crosshatch, cracks)",
     "ink": "speckle in both directions; no rows, no letter-like shapes",
-    "public": true
+    "public": true,
+    "ensemble14_both_directions": "fwd 5.6 / rev 8.5: speckle in both directions, no rows, no letters"
    },
    "row_scores": {
     "hybrid_3d2d-seed42_step-075000_forward": {
@@ -2368,6 +2433,69 @@
    "volume": "20250521140437",
    "voxel_um": 8.64,
    "seed": {
+    "z": 5376,
+    "y": 5743,
+    "x": 5933
+   },
+   "seed_placement": {
+    "zf": 0.3,
+    "rf": 0.5,
+    "angle": 0.8
+   },
+   "area_cm2": 14.02,
+   "grow_s": 3428,
+   "visual_qa": {
+    "surface": "swirls through the middle, on-sheet crosshatch in the corners",
+    "ink": "speckle in both directions; no rows, no letter-like shapes",
+    "public": true
+   },
+   "row_scores": {
+    "hybrid_3d2d-seed42_step-075000_forward": {
+     "score": 8.9,
+     "period_mm": 3.98,
+     "angle_deg": -14.0,
+     "mean_ink": 0.242,
+     "p99": 0.92,
+     "frac_gt_0.5": 0.1249,
+     "valid_px": 15366317
+    },
+    "hybrid_3d2d-seed42_step-075000_reverse": {
+     "score": 12.7,
+     "period_mm": 7.74,
+     "angle_deg": -45.0,
+     "mean_ink": 0.2447,
+     "p99": 0.935,
+     "frac_gt_0.5": 0.1348,
+     "valid_px": 15366317
+    },
+    "hybrid_3d2d-seed43_step-020000_forward": {
+     "score": 6.2,
+     "period_mm": 3.27,
+     "angle_deg": -84.3,
+     "mean_ink": 0.2543,
+     "p99": 0.833,
+     "frac_gt_0.5": 0.1041,
+     "valid_px": 15366317
+    },
+    "hybrid_3d2d-seed43_step-020000_reverse": {
+     "score": 9.1,
+     "period_mm": 3.84,
+     "angle_deg": -110.6,
+     "mean_ink": 0.2454,
+     "p99": 0.849,
+     "frac_gt_0.5": 0.098,
+     "valid_px": 15366317
+    }
+   },
+   "sheet": "results/sheets/v3_PHerc0343_s0.jpg",
+   "tifxyz": "results/segments/PHerc0343_v3_s0.tifxyz"
+  },
+  {
+   "pass": "v3",
+   "scroll": "PHerc0343",
+   "volume": "20250521140437",
+   "voxel_um": 8.64,
+   "seed": {
     "z": 8992,
     "y": 6349,
     "x": 6431
@@ -2382,7 +2510,8 @@
    "visual_qa": {
     "surface": "follows the sheet over most of the patch (crosshatch); one corner reaches air and uniform material",
     "ink": "speckle in both directions; no rows, no letter-like shapes",
-    "public": true
+    "public": true,
+    "ensemble14_both_directions": "fwd 16.9 / rev 11.7, both at 7.96 mm: dark diagonal bands along the fold lines of the render and bright rims at the air boundary; speckle elsewhere, no rows, no letters"
    },
    "row_scores": {
     "hybrid_3d2d-seed42_step-075000_forward": {
@@ -2424,6 +2553,132 @@
    },
    "sheet": "results/sheets/v3_PHerc0343_s9.jpg",
    "tifxyz": "results/segments/PHerc0343_v3_s9.tifxyz"
+  },
+  {
+   "pass": "v3",
+   "scroll": "PHerc0358",
+   "volume": "20250821151737",
+   "voxel_um": 9.362,
+   "seed": {
+    "z": 7360,
+    "y": 5600,
+    "x": 5600
+   },
+   "seed_placement": {
+    "zf": 0.5,
+    "rf": 0.7,
+    "angle": 0.8
+   },
+   "area_cm2": 17.06,
+   "grow_s": 2656,
+   "visual_qa": {
+    "surface": "radial layer-crossing swirls",
+    "ink": "speckle in both directions; no rows, no letter-like shapes",
+    "public": true
+   },
+   "row_scores": {
+    "hybrid_3d2d-seed42_step-075000_forward": {
+     "score": 7.5,
+     "period_mm": 7.12,
+     "angle_deg": -90.0,
+     "mean_ink": 0.2559,
+     "p99": 0.912,
+     "frac_gt_0.5": 0.1337,
+     "valid_px": 15362216
+    },
+    "hybrid_3d2d-seed42_step-075000_reverse": {
+     "score": 11.2,
+     "period_mm": 7.12,
+     "angle_deg": -90.0,
+     "mean_ink": 0.2609,
+     "p99": 0.912,
+     "frac_gt_0.5": 0.1417,
+     "valid_px": 15362216
+    },
+    "hybrid_3d2d-seed43_step-020000_forward": {
+     "score": 9.4,
+     "period_mm": 4.41,
+     "angle_deg": -82.9,
+     "mean_ink": 0.2386,
+     "p99": 0.81,
+     "frac_gt_0.5": 0.0911,
+     "valid_px": 15362216
+    },
+    "hybrid_3d2d-seed43_step-020000_reverse": {
+     "score": 11.5,
+     "period_mm": 7.95,
+     "angle_deg": -26.6,
+     "mean_ink": 0.2401,
+     "p99": 0.833,
+     "frac_gt_0.5": 0.0942,
+     "valid_px": 15362216
+    }
+   },
+   "sheet": "results/sheets/v3_PHerc0358_s7.jpg",
+   "tifxyz": "results/segments/PHerc0358_v3_s7.tifxyz"
+  },
+  {
+   "pass": "v3",
+   "scroll": "PHerc0483A",
+   "volume": "20250521140913",
+   "voxel_um": 8.64,
+   "seed": {
+    "z": 7935,
+    "y": 4579,
+    "x": 2608
+   },
+   "seed_placement": {
+    "zf": 0.5,
+    "rf": 0.7,
+    "angle": 3.0
+   },
+   "area_cm2": 13.02,
+   "grow_s": 2345,
+   "visual_qa": {
+    "surface": "on the sheet over most of the patch (diagonal crosshatch), swirls in one corner",
+    "ink": "speckle in both directions; no rows, no letter-like shapes",
+    "public": true
+   },
+   "row_scores": {
+    "hybrid_3d2d-seed42_step-075000_forward": {
+     "score": 9.3,
+     "period_mm": 3.63,
+     "angle_deg": -173.7,
+     "mean_ink": 0.2351,
+     "p99": 0.927,
+     "frac_gt_0.5": 0.1075,
+     "valid_px": 15257766
+    },
+    "hybrid_3d2d-seed42_step-075000_reverse": {
+     "score": 9.7,
+     "period_mm": 4.89,
+     "angle_deg": -26.6,
+     "mean_ink": 0.2408,
+     "p99": 0.92,
+     "frac_gt_0.5": 0.1108,
+     "valid_px": 15257766
+    },
+    "hybrid_3d2d-seed43_step-020000_forward": {
+     "score": 7.2,
+     "period_mm": 3.22,
+     "angle_deg": -168.7,
+     "mean_ink": 0.2049,
+     "p99": 0.716,
+     "frac_gt_0.5": 0.0456,
+     "valid_px": 15257766
+    },
+    "hybrid_3d2d-seed43_step-020000_reverse": {
+     "score": 7.2,
+     "period_mm": 5.63,
+     "angle_deg": -149.0,
+     "mean_ink": 0.2031,
+     "p99": 0.724,
+     "frac_gt_0.5": 0.0424,
+     "valid_px": 15257766
+    }
+   },
+   "sheet": "results/sheets/v3_PHerc0483A_s8.jpg",
+   "tifxyz": "results/segments/PHerc0483A_v3_s8.tifxyz"
   }
  ],
  "published_segments": [
