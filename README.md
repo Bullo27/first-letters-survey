@@ -9,6 +9,8 @@ machine: an RTX 3060 (12 GB), a 14-core Xeon and a home Wi-Fi link.
 
 > Status: <!-- STATUS -->65 patches (971 cm²) on 21 of the 21 eligible scrolls without catalog segments, and 20 of the team's published segments, as of 2026-09-24 15:07Z. The survey is complete.<!-- /STATUS -->
 
+> Update 2026-09-25: PHerc1447 left the First Letters list on 2026-09-24 ([villa #1887](https://github.com/ScrollPrize/villa/pull/1887); the list now "excludes those where letters have now been found") and stays on the 2027 Grand Prize list. All 65 survey patches are on scrolls still on the First Letters list; the 14 PHerc1447 team segments below were run before the change.
+
 ## Summary
 
 <!-- SUMMARY -->
@@ -265,7 +267,7 @@ eligible 9.362 µm volumes), with the arms, readouts and pass/fail rules written
   [Herculaneum Scroll Tools](https://github.com/axiosdevs/herculaneum-scroll-tools)). We missed both and hit exactly
   that failure: our first seed picker used the prediction's extent as the scroll's radius, and 60 of its 137 seeds
   landed outside the scroll (6 more straddled the edge). Those patches are excluded here, and the seed picker now works
-  from the scan mask. Our per-volume check on the 23 First Letters volumes (level 5, `results/results.json`) agrees:
+  from the scan mask. Our per-volume check on the 23 volumes on the First Letters list as of 2026-09-23 (level 5, `results/results.json`) agrees:
   34.0–60.7 % of lit samples (median 47.8 %) lie where the masked scan is 0.
 - **`vc_render_tifxyz` aborts on a network drop** (`terminate called recursively`, core dump) instead of retrying.
   Two survey renders died that way during Wi-Fi drops. Reported as
