@@ -7,16 +7,18 @@ at native resolution, run through [`scrollprize/ink_9um`](https://huggingface.co
 depth directions, and checked by eye. Everything streams from the open-data bucket. The whole survey ran on one
 machine: an RTX 3060 (12 GB), a 14-core Xeon and a home Wi-Fi link.
 
-> Status: <!-- STATUS -->65 patches (971 cm²) on 21 of the 21 eligible scrolls without catalog segments, and 20 of the team's published segments, as of 2026-09-24 15:07Z. The survey is complete.<!-- /STATUS -->
+> Status: <!-- STATUS -->65 patches (971 cm²) on 21 of the 21 eligible scrolls without catalog segments, and 21 of the team's published segments, as of 2026-09-26 10:40Z. The survey is complete.<!-- /STATUS -->
 
-> Update 2026-09-25: PHerc1447 left the First Letters list on 2026-09-24 ([villa #1887](https://github.com/ScrollPrize/villa/pull/1887); the list now "excludes those where letters have now been found") and stays on the 2027 Grand Prize list. All 65 survey patches are on scrolls still on the First Letters list; the 14 PHerc1447 team segments below were run before the change.
+> Update 2026-09-25: PHerc1447 left the First Letters list on 2026-09-24 ([villa #1887](https://github.com/ScrollPrize/villa/pull/1887); the list now "excludes those where letters have now been found") and stays on the 2027 Grand Prize list. All 65 survey patches are on scrolls still on the First Letters list; the 15 PHerc1447 team segments below were run before the change.
+
+> Update 2026-09-26: the PHerc1447 segment held back from the first release (20250702235910) is now included, with the ring-shaped mark that made us hold it back (see *Validation*).
 
 ## Summary
 
 <!-- SUMMARY -->
 - **No letter-like ink in any patch.** On 65 automatically grown patches (971 cm² in total) the two checkpoints give speckle in both depth directions: no rows and no letter shapes (row scores 8.0–33.5).
 - **All 14 released checkpoints, averaged, in both directions** on 10 patches whose renders show the sheet over large areas: still no letters (row scores 5.6–16.9; every map checked by eye).
-- **The team's own segments** of PHerc0800 and PHerc1447 (20 of 21; 1 held back from this release for further checks), run through all 14 released checkpoints and averaged, show the same: blobs, bright rims around holes in the mesh and responses on onion-ring artifacts (see *Validation*), no rows (row scores 2.5–23.1).
+- **The team's own segments** of PHerc0800 and PHerc1447 (all 21), run through all 14 released checkpoints and averaged, show the same: blobs, bright rims around holes in the mesh and responses on onion-ring artifacts (see *Validation*), no rows (row scores 2.5–23.1). One PHerc1447 segment also shows a single isolated ring-shaped mark, which we read as more likely structure than ink (see *Validation*).
 - **These negatives do not mean there is no text.** We ran the same pipeline on PHerc0841, a scroll the models never saw, where the team's 2.4 µm predictions show Greek text (see *Calibration on a scroll the models never saw*). On the team's own traced surfaces the maps find where the ink is, but only as blobs: no letter is readable and rows show on one of three segments. And patches grown by `fls.py` from seeds placed on that text leave the text-bearing sheet (0 of 3 stay on it) and look like the speckle here. Held-out segments of PHerc0139, a scroll the models were trained on, do give clear rows (row scores 73–148).
 - **Most automatic patches do not follow a single sheet** for long near the compressed core: their renders show layer-crossing swirls. Hand refinement in VC3D, as the team's workflow recommends, is the obvious next step for any region worth a closer look.
 <!-- /SUMMARY -->
@@ -66,6 +68,8 @@ A 20-generation test patch with the default seed (PHerc0343, 0.42 cm²) took 3 m
 - `analysis/`: `rowscore.py` and `tile_scores.py` (the triage score), `census_outside_mask.py` (the census),
   `slab_profile.py` and `recenter.py` (the slab-centring check and the re-centring test).
 - `analysis/unseen_scroll_pherc0841/`: the calibration on PHerc0841 (plan, results, notes by eye, scripts, logs).
+- `analysis/pherc1447_ring/`: the check of the one ring-shaped mark on PHerc1447 segment 20250702235910 (script and
+  numbers).
 
 ## Method
 
@@ -121,6 +125,18 @@ A 20-generation test patch with the default seed (PHerc0343, 0.42 cm²) took 3 m
   look like curved strokes; the render shows where they come from:
 
   ![Ink-model responses on onion rings and on hole rims](results/figures/artifacts.jpg)
+- **One mark we could not explain.** On PHerc1447 segment 20250702235910, whose surface follows the sheet, all 14
+  forward checkpoints draw one isolated ring about 3.4 mm across, brightest along its top and bottom arcs (centre at
+  row 1439, column 2253 of the team's surface volume; x 4656, y 2884, z 12652 in volume 20250521151220). The two
+  reverse maps do not show it: the ring is 20.0–44.5 grey levels brighter than its surroundings in the forward maps
+  and 5.2 and 5.6 in the reverse ones. It is 0.9 mm from the nearest edge of the mesh, so it is not a hole rim, and
+  nothing within 8 mm of it forms rows. Along the ring the render is darker than its surroundings in the layers on
+  both sides of the surface (by up to 0.56 standard deviations) and slightly brighter on the surface itself. We read
+  it as more likely structure than ink, mainly because it stands alone, but could not rule ink out. We held this
+  segment back from the first release because PHerc1447 was then on the First Letters list. Script and numbers:
+  `analysis/pherc1447_ring/`.
+
+  ![An isolated ring in the 14-checkpoint forward mean on PHerc1447 segment 20250702235910, not in the reverse maps](results/figures/pherc1447_ring.jpg)
 - **Limits of the score.** Cut into 6 cm² tiles, the same control maps score 6.8–77.4, which overlaps the range of
   the negatives, so a low score on a small patch proves little. That is why every verdict here is visual. The
   other way round, the highest single map in the survey (33.5, PHerc0813 v3 seed 0, reverse) is speckle and blotches
@@ -248,6 +264,7 @@ eligible 9.362 µm volumes), with the arms, readouts and pass/fail rules written
 | PHerc1447 | 20250502184845-auto_grown_20250502164121265 | oblique striations: surface cuts across several layers | border artifacts and blobs; no letter-like shapes | 5.7 | [view](results/sheets/published_PHerc1447_20250502184845-auto_grown_20250502164121.jpg) |
 | PHerc1447 | 20250502185519-auto_grown_20250502164303733 | oblique striations: surface cuts across several layers | border artifacts and blobs; no letter-like shapes | 4.8 | [view](results/sheets/published_PHerc1447_20250502185519-auto_grown_20250502164303.jpg) |
 | PHerc1447 | 20250502205333-auto_grown_20250502181030065 | oblique striations: surface cuts across several layers | border artifacts and blobs; no letter-like shapes | 14.2 | [view](results/sheets/published_PHerc1447_20250502205333-auto_grown_20250502181030.jpg) |
+| PHerc1447 | 20250702235910-auto_grown_20250702235910292 | follows the sheet | blobs; one isolated ring-shaped mark ~3.4 mm across in all 14 forward checkpoints, not in the reverse maps; more likely structure than ink (see *Validation*); no rows | 6.1 | [view](results/sheets/published_PHerc1447_20250702235910-auto_grown_20250702235910.jpg) |
 | PHerc1447 | 20250703025628-auto_grown_20250703025628283 | follows the sheet | bright rings around mask holes (border artifact), blobs; no letter-like shapes | 8.8 | [view](results/sheets/published_PHerc1447_20250703025628-auto_grown_20250703025628.jpg) |
 | PHerc1447 | 20250703034159-auto_grown_20250703034159599 | follows the sheet | blobs, hole-border arcs; no letter-like shapes | 11.7 | [view](results/sheets/published_PHerc1447_20250703034159-auto_grown_20250703034159.jpg) |
 | PHerc1447 | 20251105093211-z_dbg_gen_00320 | on the sheet between many onion-ring spots, where the surface cuts through bumps in the layers | blobs; bright curves and rings exactly on the onion rings (artifact); no rows, no letter-like shapes | 6.3 | [view](results/sheets/published_PHerc1447_20251105093211-z_dbg_gen_00320.jpg) |

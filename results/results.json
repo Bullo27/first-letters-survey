@@ -4446,6 +4446,26 @@
   },
   {
    "scroll": "PHerc1447",
+   "segment": "20250702235910-auto_grown_20250702235910292",
+   "ensemble_row_score": {
+    "score": 6.1,
+    "period_mm": 2.56,
+    "angle_deg": -78.5,
+    "mean_ink": 0.1918,
+    "p99": 0.7,
+    "frac_gt_0.5": 0.0311,
+    "valid_px": 5072797
+   },
+   "visual_qa": {
+    "surface": "follows the sheet",
+    "ink": "blobs; one isolated ring-shaped mark ~3.4 mm across in all 14 forward checkpoints, not in the reverse maps; more likely structure than ink (see *Validation*); no rows",
+    "public": true,
+    "held_back": "from the first release (2026-09-23), when PHerc1447 was on the First Letters list; released 2026-09-26"
+   },
+   "sheet": "results/sheets/published_PHerc1447_20250702235910-auto_grown_20250702235910.jpg"
+  },
+  {
+   "scroll": "PHerc1447",
    "segment": "20250703025628-auto_grown_20250703025628283",
    "ensemble_row_score": {
     "score": 8.8,
