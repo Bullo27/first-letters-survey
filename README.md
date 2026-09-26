@@ -149,6 +149,10 @@ eligible 9.362 µm volumes), with the arms, readouts and pass/fail rules written
   the pre-registered rules the clean-surface arm is inconclusive (1 of 3 segments passes, 2 were needed) and the
   whole-tool arm scores 0 of 3. The row-score threshold was not checked against the reference before the plan was
   frozen; the details page says what that changes.
+- **Post-hoc, depth sharpening** ([villa #1898](https://github.com/ScrollPrize/villa/issues/1898)): that issue's depth
+  filter, run unmodified on the same three surfaces, raises pixel AUC by +0.018 to +0.062 (2-checkpoint mean, with its
+  intensity map) but the letter-scale score by only +0.002 to +0.004, and by eye no letter becomes legible
+  ([plan, script and numbers](analysis/unseen_scroll_pherc0841/depth_sharpen/)).
 
 ![PHerc0841: our maps on the team's surfaces next to the team's 2.4 µm predictions, and a patch grown by fls.py from a seed on the text, with its distance to the team's sheet](results/figures/calibration_pherc0841.jpg)
 
