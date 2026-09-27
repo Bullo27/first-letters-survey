@@ -13,6 +13,8 @@ machine: an RTX 3060 (12 GB), a 14-core Xeon and a home Wi-Fi link.
 
 > Update 2026-09-26: the PHerc1447 segment held back from the first release (20250702235910) is now included, with the ring-shaped mark that made us hold it back (see *Validation*).
 
+> Update 2026-09-27: on-prediction support, the check [villa #1906](https://github.com/ScrollPrize/villa/pull/1906) adds to the tracer, for all 65 patches (see *Validation*).
+
 ## Summary
 
 <!-- SUMMARY -->
@@ -70,6 +72,8 @@ A 20-generation test patch with the default seed (PHerc0343, 0.42 cm²) took 3 m
 - `analysis/unseen_scroll_pherc0841/`: the calibration on PHerc0841 (plan, results, notes by eye, scripts, logs).
 - `analysis/pherc1447_ring/`: the check of the one ring-shaped mark on PHerc1447 segment 20250702235910 (script and
   numbers).
+- `analysis/on_prediction_support/`: villa #1906's on-prediction support on all 65 patches, with a hit-rate profile along
+  the normal and a cross-check against #1906's own tracer (scripts and numbers).
 
 ## Method
 
@@ -143,6 +147,11 @@ A 20-generation test patch with the default seed (PHerc0343, 0.42 cm²) took 3 m
   on a patch that cuts across layers throughout; all four of its maps peak at the same 6.61 mm period and angle, in
   both directions (7.8–33.5), and by eye no rows show. The next (28.7, PHerc0191) comes from broad bands in a patch that
   also cuts across layers; the other three maps of that patch score 7.2–9.2.
+- **On-prediction support ([villa #1906](https://github.com/ScrollPrize/villa/pull/1906)).** The share of a patch's vertices
+  that land on the prediction it was grown from, which #1906 adds to the tracer with a warning below 50 %: patches
+  that follow the sheet throughout score 44.8–62.7 %, patches with layer-crossing swirls and no on-sheet part
+  25.9–34.8 %, close to the 17.5–31.1 % of nonzero voxels around them. #1906's own tracer gives the same
+  counts as our script (`analysis/on_prediction_support/`).
 
 ## Calibration on a scroll the models never saw
 

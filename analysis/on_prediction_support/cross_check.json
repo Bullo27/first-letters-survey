@@ -1,0 +1,225 @@
+{
+ "seed_of": "v3/PHerc0211/s0",
+ "surface_of_seed_patch": "follows the sheet throughout (diagonal crosshatch)",
+ "generations": 30,
+ "runs": [
+  {
+   "area_cm2": 1.1454454423492517,
+   "tracer_line": "on-prediction support: 44.6% (1499/3364 vertices on nonzero prediction)",
+   "tracer_warning": "WARNING: vc_grow_seg_from_seed: on-prediction support 44.6% is below min_on_prediction_support 50.0%; the surface may cut across windings instead of following a sheet (#1675).",
+   "tracer_on_total": [
+    1499,
+    3364
+   ],
+   "ours_on_total": [
+    1499,
+    3364
+   ],
+   "identical": true,
+   "ours": {
+    "on": 1499,
+    "total": 3364,
+    "support_pct": 44.6,
+    "n_profile_vertices": 3136,
+    "profile_pct_by_normal_offset": {
+     "-8": 20.3,
+     "-7": 19.4,
+     "-6": 17.9,
+     "-5": 16.7,
+     "-4": 16.9,
+     "-3": 18.6,
+     "-2": 26.1,
+     "-1": 40.0,
+     "0": 44.1,
+     "1": 44.2,
+     "2": 35.2,
+     "3": 24.5,
+     "4": 19.8,
+     "5": 18.7,
+     "6": 18.4,
+     "7": 19.9,
+     "8": 20.8
+    },
+    "surface_minus_5_to_8_voxels_off": 25.1,
+    "background_pct": 26.3,
+    "chunks": 65
+   }
+  },
+  {
+   "area_cm2": 1.1453480347069482,
+   "tracer_line": "on-prediction support: 47.9% (1611/3364 vertices on nonzero prediction)",
+   "tracer_warning": "WARNING: vc_grow_seg_from_seed: on-prediction support 47.9% is below min_on_prediction_support 50.0%; the surface may cut across windings instead of following a sheet (#1675).",
+   "tracer_on_total": [
+    1611,
+    3364
+   ],
+   "ours_on_total": [
+    1611,
+    3364
+   ],
+   "identical": true,
+   "ours": {
+    "on": 1611,
+    "total": 3364,
+    "support_pct": 47.9,
+    "n_profile_vertices": 3136,
+    "profile_pct_by_normal_offset": {
+     "-8": 18.6,
+     "-7": 16.6,
+     "-6": 15.7,
+     "-5": 15.1,
+     "-4": 16.2,
+     "-3": 18.9,
+     "-2": 27.1,
+     "-1": 44.4,
+     "0": 47.7,
+     "1": 47.0,
+     "2": 37.1,
+     "3": 23.6,
+     "4": 19.5,
+     "5": 17.9,
+     "6": 17.1,
+     "7": 17.8,
+     "8": 18.9
+    },
+    "surface_minus_5_to_8_voxels_off": 30.5,
+    "background_pct": 26.4,
+    "chunks": 64
+   }
+  },
+  {
+   "area_cm2": 1.148470568264706,
+   "tracer_line": "on-prediction support: 47.6% (1600/3364 vertices on nonzero prediction)",
+   "tracer_warning": "WARNING: vc_grow_seg_from_seed: on-prediction support 47.6% is below min_on_prediction_support 50.0%; the surface may cut across windings instead of following a sheet (#1675).",
+   "tracer_on_total": [
+    1600,
+    3364
+   ],
+   "ours_on_total": [
+    1600,
+    3364
+   ],
+   "identical": true,
+   "ours": {
+    "on": 1600,
+    "total": 3364,
+    "support_pct": 47.6,
+    "n_profile_vertices": 3136,
+    "profile_pct_by_normal_offset": {
+     "-8": 19.9,
+     "-7": 18.6,
+     "-6": 17.1,
+     "-5": 16.9,
+     "-4": 16.9,
+     "-3": 18.0,
+     "-2": 27.4,
+     "-1": 42.9,
+     "0": 46.5,
+     "1": 45.7,
+     "2": 33.7,
+     "3": 23.1,
+     "4": 19.5,
+     "5": 18.0,
+     "6": 17.8,
+     "7": 18.1,
+     "8": 19.3
+    },
+    "surface_minus_5_to_8_voxels_off": 28.3,
+    "background_pct": 26.5,
+    "chunks": 65
+   }
+  },
+  {
+   "area_cm2": 1.14490204635621,
+   "tracer_line": "on-prediction support: 43.7% (1469/3364 vertices on nonzero prediction)",
+   "tracer_warning": "WARNING: vc_grow_seg_from_seed: on-prediction support 43.7% is below min_on_prediction_support 50.0%; the surface may cut across windings instead of following a sheet (#1675).",
+   "tracer_on_total": [
+    1469,
+    3364
+   ],
+   "ours_on_total": [
+    1469,
+    3364
+   ],
+   "identical": true,
+   "ours": {
+    "on": 1469,
+    "total": 3364,
+    "support_pct": 43.7,
+    "n_profile_vertices": 3136,
+    "profile_pct_by_normal_offset": {
+     "-8": 20.3,
+     "-7": 19.0,
+     "-6": 18.7,
+     "-5": 17.7,
+     "-4": 18.9,
+     "-3": 20.2,
+     "-2": 28.3,
+     "-1": 40.3,
+     "0": 43.3,
+     "1": 41.8,
+     "2": 32.4,
+     "3": 21.0,
+     "4": 18.5,
+     "5": 18.0,
+     "6": 17.9,
+     "7": 18.8,
+     "8": 19.7
+    },
+    "surface_minus_5_to_8_voxels_off": 24.5,
+    "background_pct": 26.4,
+    "chunks": 65
+   }
+  },
+  {
+   "area_cm2": 1.1434840728840452,
+   "tracer_line": "on-prediction support: 50.9% (1711/3364 vertices on nonzero prediction)",
+   "tracer_warning": null,
+   "tracer_on_total": [
+    1711,
+    3364
+   ],
+   "ours_on_total": [
+    1711,
+    3364
+   ],
+   "identical": true,
+   "ours": {
+    "on": 1711,
+    "total": 3364,
+    "support_pct": 50.9,
+    "n_profile_vertices": 3136,
+    "profile_pct_by_normal_offset": {
+     "-8": 16.9,
+     "-7": 16.7,
+     "-6": 16.0,
+     "-5": 15.8,
+     "-4": 17.5,
+     "-3": 19.0,
+     "-2": 28.7,
+     "-1": 47.1,
+     "0": 50.6,
+     "1": 50.1,
+     "2": 37.2,
+     "3": 21.7,
+     "4": 18.4,
+     "5": 17.4,
+     "6": 17.8,
+     "7": 18.6,
+     "8": 19.3
+    },
+    "surface_minus_5_to_8_voxels_off": 33.3,
+    "background_pct": 26.4,
+    "chunks": 64
+   }
+  }
+ ],
+ "summary": {
+  "support_pct_min_max": [
+   43.7,
+   50.9
+  ],
+  "warnings": 4,
+  "all_identical": true
+ }
+}

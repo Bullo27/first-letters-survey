@@ -1,0 +1,86 @@
+{
+ "20250521115057": {
+  "scroll": "PHerc0175A",
+  "surface_prediction": "PHerc0175A/representations/predictions/surfaces/20250521115057-surface-20260413222639-surface-m7-L0-th0.2.zarr"
+ },
+ "20250521120456": {
+  "scroll": "PHerc1218",
+  "surface_prediction": "PHerc1218/representations/predictions/surfaces/20250521120456-surface-20260413222639-surface-m7-L0-th0.2.zarr"
+ },
+ "20250521125822": {
+  "scroll": "PHerc0175B",
+  "surface_prediction": "PHerc0175B/representations/predictions/surfaces/20250521125822-surface-20260413222639-surface-m7-L0-th0.2.zarr"
+ },
+ "20250521133212": {
+  "scroll": "PHerc0306B",
+  "surface_prediction": "PHerc0306B/representations/predictions/surfaces/20250521133212-surface-20260413222639-surface-m7-L0-th0.2.zarr"
+ },
+ "20250521140437": {
+  "scroll": "PHerc0343",
+  "surface_prediction": "PHerc0343/representations/predictions/surfaces/20250521140437-surface-20260413222639-surface-m7-L0-th0.2.zarr"
+ },
+ "20250521140913": {
+  "scroll": "PHerc0483A",
+  "surface_prediction": "PHerc0483A/representations/predictions/surfaces/20250521140913-surface-20260413222639-surface-m7-L0-th0.2.zarr"
+ },
+ "20250521151210": {
+  "scroll": "PHerc0490A",
+  "surface_prediction": "PHerc0490A/representations/predictions/surfaces/20250521151210-surface-20260413222639-surface-m7-L0-th0.2.zarr"
+ },
+ "20250521151215": {
+  "scroll": "PHerc0490B",
+  "surface_prediction": "PHerc0490B/representations/predictions/surfaces/20250521151215-surface-20260413222639-surface-m7-L0-th0.2.zarr"
+ },
+ "20250728152254": {
+  "scroll": "PHerc0846A",
+  "surface_prediction": "PHerc0846A/representations/predictions/surfaces/20250728152254-surface-20260413222639-surface-m7-L0-th0.2.zarr"
+ },
+ "20250804142305": {
+  "scroll": "PHerc0846B",
+  "surface_prediction": "PHerc0846B/representations/predictions/surfaces/20250804142305-surface-20260413222639-surface-m7-L0-th0.2.zarr"
+ },
+ "20250820131727": {
+  "scroll": "PHerc1203",
+  "surface_prediction": "PHerc1203/representations/predictions/surfaces/20250820131727-surface-20260413222639-surface-m7-L0-th0.2.zarr"
+ },
+ "20250821151635": {
+  "scroll": "PHerc0191",
+  "surface_prediction": "PHerc0191/representations/predictions/surfaces/20250821151635-surface-20260413222639-surface-m7-L0-th0.2.zarr"
+ },
+ "20250821151648": {
+  "scroll": "PHerc1545",
+  "surface_prediction": "PHerc1545/representations/predictions/surfaces/20250821151648-surface-20260413222639-surface-m7-L0-th0.2.zarr"
+ },
+ "20250821151701": {
+  "scroll": "PHerc0826",
+  "surface_prediction": "PHerc0826/representations/predictions/surfaces/20250821151701-surface-20260413222639-surface-m7-L0-th0.2.zarr"
+ },
+ "20250821151723": {
+  "scroll": "PHerc0813",
+  "surface_prediction": "PHerc0813/representations/predictions/surfaces/20250821151723-surface-20260413222639-surface-m7-L0-th0.2.zarr"
+ },
+ "20250821151737": {
+  "scroll": "PHerc0358",
+  "surface_prediction": "PHerc0358/representations/predictions/surfaces/20250821151737-surface-20260413222639-surface-m7-L0-th0.2.zarr"
+ },
+ "20250821151750": {
+  "scroll": "PHerc0257",
+  "surface_prediction": "PHerc0257/representations/predictions/surfaces/20250821151750-surface-20260413222639-surface-m7-L0-th0.2.zarr"
+ },
+ "20250821151803": {
+  "scroll": "PHerc0211",
+  "surface_prediction": "PHerc0211/representations/predictions/surfaces/20250821151803-surface-20260413222639-surface-m7-L0-th0.2.zarr"
+ },
+ "20250821151825": {
+  "scroll": "PHerc0125",
+  "surface_prediction": "PHerc0125/representations/predictions/surfaces/20250821151825-surface-20260413222639-surface-m7-L0-th0.2.zarr"
+ },
+ "20251110183117": {
+  "scroll": "PHerc0268",
+  "surface_prediction": "PHerc0268/representations/predictions/surfaces/20251110183117-surface-20260413222639-surface-m7-L0-th0.2.zarr"
+ },
+ "20251124083638": {
+  "scroll": "PHerc0483B",
+  "surface_prediction": "PHerc0483B/representations/predictions/surfaces/20251124083638-surface-20260413222639-surface-m7-L0-th0.2.zarr"
+ }
+}
