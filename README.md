@@ -72,8 +72,8 @@ A 20-generation test patch with the default seed (PHerc0343, 0.42 cm²) took 3 m
 - `analysis/unseen_scroll_pherc0841/`: the calibration on PHerc0841 (plan, results, notes by eye, scripts, logs).
 - `analysis/pherc1447_ring/`: the check of the one ring-shaped mark on PHerc1447 segment 20250702235910 (script and
   numbers).
-- `analysis/on_prediction_support/`: villa #1906's on-prediction support on all 65 patches, with a hit-rate profile along
-  the normal and a cross-check against #1906's own tracer (scripts and numbers).
+- `analysis/on_prediction_support/`: villa #1906's on-prediction support and background check on the survey patches, with a
+  hit-rate profile along the normal and a cross-check against #1906's own tracer (scripts and numbers).
 
 ## Method
 
@@ -150,8 +150,8 @@ A 20-generation test patch with the default seed (PHerc0343, 0.42 cm²) took 3 m
 - **On-prediction support ([villa #1906](https://github.com/ScrollPrize/villa/pull/1906)).** The share of a patch's vertices
   that land on the prediction it was grown from, which #1906 adds to the tracer with a warning below 50 %: patches
   that follow the sheet throughout score 44.8–62.7 %, patches with layer-crossing swirls and no on-sheet part
-  25.9–34.8 %, close to the 17.5–31.1 % of nonzero voxels around them. #1906's own tracer gives the same
-  counts as our script (`analysis/on_prediction_support/`).
+  25.9–34.8 %, from 2.7 points below to 10.9 points above the background in #1906's box
+  (estimated). #1906's own tracer gives the same counts as our script (`analysis/on_prediction_support/`).
 
 ## Calibration on a scroll the models never saw
 

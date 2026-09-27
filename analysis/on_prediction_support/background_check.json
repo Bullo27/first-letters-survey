@@ -1,0 +1,411 @@
+{
+ "n_sample": 500,
+ "patches": {
+  "v2/PHerc0175B/s0": {
+   "group": "swirls, no on-sheet part",
+   "support_pct": 31.7,
+   "box_voxels_xyz": [
+    2222.0,
+    2312.0,
+    3942.0
+   ],
+   "chunks_hit_by_2000_points": 1474,
+   "of_which_contain_a_surface_vertex": 208,
+   "surface_chunks": 434,
+   "box_background_pct_est": 31.4,
+   "support_at_or_below_box_background": false
+  },
+  "v2/PHerc0257/s0": {
+   "group": "swirls, no on-sheet part",
+   "support_pct": 31.3,
+   "box_voxels_xyz": [
+    2250.0,
+    1987.0,
+    2934.0
+   ],
+   "chunks_hit_by_2000_points": 1280,
+   "of_which_contain_a_surface_vertex": 175,
+   "surface_chunks": 273,
+   "box_background_pct_est": 27.8,
+   "support_at_or_below_box_background": false
+  },
+  "v2/PHerc0268/s0": {
+   "group": "swirls, no on-sheet part",
+   "support_pct": 30.1,
+   "box_voxels_xyz": [
+    2964.0,
+    1505.0,
+    1810.0
+   ],
+   "chunks_hit_by_2000_points": 1015,
+   "of_which_contain_a_surface_vertex": 173,
+   "surface_chunks": 211,
+   "box_background_pct_est": 31.6,
+   "support_at_or_below_box_background": true
+  },
+  "v2/PHerc0306B/s0": {
+   "group": "swirls, no on-sheet part",
+   "support_pct": 31.0,
+   "box_voxels_xyz": [
+    3059.0,
+    2595.0,
+    3644.0
+   ],
+   "chunks_hit_by_2000_points": 1590,
+   "of_which_contain_a_surface_vertex": 189,
+   "surface_chunks": 492,
+   "box_background_pct_est": 24.6,
+   "support_at_or_below_box_background": false
+  },
+  "v2/PHerc0483B/s0": {
+   "group": "swirls, no on-sheet part",
+   "support_pct": 33.2,
+   "box_voxels_xyz": [
+    1990.0,
+    1719.0,
+    3265.0
+   ],
+   "chunks_hit_by_2000_points": 1200,
+   "of_which_contain_a_surface_vertex": 211,
+   "surface_chunks": 306,
+   "box_background_pct_est": 27.8,
+   "support_at_or_below_box_background": false
+  },
+  "v2/PHerc0490A/s0": {
+   "group": "swirls, no on-sheet part",
+   "support_pct": 31.9,
+   "box_voxels_xyz": [
+    1478.0,
+    1910.0,
+    2882.0
+   ],
+   "chunks_hit_by_2000_points": 1040,
+   "of_which_contain_a_surface_vertex": 270,
+   "surface_chunks": 348,
+   "box_background_pct_est": 31.0,
+   "support_at_or_below_box_background": false
+  },
+  "v2/PHerc0490B/s0": {
+   "group": "swirls, no on-sheet part",
+   "support_pct": 25.9,
+   "box_voxels_xyz": [
+    2702.0,
+    1678.0,
+    2692.0
+   ],
+   "chunks_hit_by_2000_points": 1218,
+   "of_which_contain_a_surface_vertex": 230,
+   "surface_chunks": 355,
+   "box_background_pct_est": 28.6,
+   "support_at_or_below_box_background": true
+  },
+  "v2/PHerc0826/s0": {
+   "group": "swirls, no on-sheet part",
+   "support_pct": 28.7,
+   "box_voxels_xyz": [
+    2124.0,
+    2188.0,
+    3592.0
+   ],
+   "chunks_hit_by_2000_points": 1398,
+   "of_which_contain_a_surface_vertex": 232,
+   "surface_chunks": 418,
+   "box_background_pct_est": 23.6,
+   "support_at_or_below_box_background": false
+  },
+  "v2/PHerc1545/s0": {
+   "group": "swirls, no on-sheet part",
+   "support_pct": 31.2,
+   "box_voxels_xyz": [
+    2587.0,
+    2345.0,
+    3609.0
+   ],
+   "chunks_hit_by_2000_points": 1513,
+   "of_which_contain_a_surface_vertex": 194,
+   "surface_chunks": 382,
+   "box_background_pct_est": 23.2,
+   "support_at_or_below_box_background": false
+  },
+  "v3/PHerc0125/s0": {
+   "group": "follows the sheet throughout",
+   "support_pct": 60.8,
+   "box_voxels_xyz": [
+    4317.0,
+    847.0,
+    4902.0
+   ],
+   "chunks_hit_by_2000_points": 1455,
+   "of_which_contain_a_surface_vertex": 326,
+   "surface_chunks": 613,
+   "box_background_pct_est": 24.8,
+   "support_at_or_below_box_background": false
+  },
+  "v3/PHerc0175A/s7": {
+   "group": "follows the sheet throughout",
+   "support_pct": 62.7,
+   "box_voxels_xyz": [
+    4178.0,
+    2346.0,
+    4777.0
+   ],
+   "chunks_hit_by_2000_points": 1731,
+   "of_which_contain_a_surface_vertex": 186,
+   "surface_chunks": 682,
+   "box_background_pct_est": 20.2,
+   "support_at_or_below_box_background": false
+  },
+  "v3/PHerc0175B/s0": {
+   "group": "swirls, no on-sheet part",
+   "support_pct": 33.5,
+   "box_voxels_xyz": [
+    2851.0,
+    1725.0,
+    2357.0
+   ],
+   "chunks_hit_by_2000_points": 1206,
+   "of_which_contain_a_surface_vertex": 183,
+   "surface_chunks": 254,
+   "box_background_pct_est": 32.0,
+   "support_at_or_below_box_background": false
+  },
+  "v3/PHerc0191/s9": {
+   "group": "swirls, no on-sheet part",
+   "support_pct": 31.8,
+   "box_voxels_xyz": [
+    3184.0,
+    2251.0,
+    3269.0
+   ],
+   "chunks_hit_by_2000_points": 1547,
+   "of_which_contain_a_surface_vertex": 207,
+   "surface_chunks": 456,
+   "box_background_pct_est": 26.8,
+   "support_at_or_below_box_background": false
+  },
+  "v3/PHerc0211/s0": {
+   "group": "follows the sheet throughout",
+   "support_pct": 44.8,
+   "box_voxels_xyz": [
+    4326.0,
+    1049.0,
+    5219.0
+   ],
+   "chunks_hit_by_2000_points": 1544,
+   "of_which_contain_a_surface_vertex": 244,
+   "surface_chunks": 571,
+   "box_background_pct_est": 22.2,
+   "support_at_or_below_box_background": false
+  },
+  "v3/PHerc0268/s0": {
+   "group": "swirls, no on-sheet part",
+   "support_pct": 32.7,
+   "box_voxels_xyz": [
+    4446.0,
+    1780.0,
+    3383.0
+   ],
+   "chunks_hit_by_2000_points": 1580,
+   "of_which_contain_a_surface_vertex": 165,
+   "surface_chunks": 435,
+   "box_background_pct_est": 33.2,
+   "support_at_or_below_box_background": true
+  },
+  "v3/PHerc0268/s9": {
+   "group": "swirls, no on-sheet part",
+   "support_pct": 34.8,
+   "box_voxels_xyz": [
+    2000.0,
+    1113.0,
+    3125.0
+   ],
+   "chunks_hit_by_2000_points": 965,
+   "of_which_contain_a_surface_vertex": 221,
+   "surface_chunks": 249,
+   "box_background_pct_est": 30.0,
+   "support_at_or_below_box_background": false
+  },
+  "v3/PHerc0306B/s9": {
+   "group": "follows the sheet throughout",
+   "support_pct": 49.3,
+   "box_voxels_xyz": [
+    4195.0,
+    2327.0,
+    5209.0
+   ],
+   "chunks_hit_by_2000_points": 1765,
+   "of_which_contain_a_surface_vertex": 149,
+   "surface_chunks": 640,
+   "box_background_pct_est": 22.6,
+   "support_at_or_below_box_background": false
+  },
+  "v3/PHerc0358/s7": {
+   "group": "swirls, no on-sheet part",
+   "support_pct": 30.8,
+   "box_voxels_xyz": [
+    2738.0,
+    1176.0,
+    3327.0
+   ],
+   "chunks_hit_by_2000_points": 1166,
+   "of_which_contain_a_surface_vertex": 282,
+   "surface_chunks": 406,
+   "box_background_pct_est": 25.2,
+   "support_at_or_below_box_background": false
+  },
+  "v3/PHerc0483B/s8": {
+   "group": "swirls, no on-sheet part",
+   "support_pct": 33.1,
+   "box_voxels_xyz": [
+    2172.0,
+    1615.0,
+    3439.0
+   ],
+   "chunks_hit_by_2000_points": 1223,
+   "of_which_contain_a_surface_vertex": 234,
+   "surface_chunks": 354,
+   "box_background_pct_est": 25.8,
+   "support_at_or_below_box_background": false
+  },
+  "v3/PHerc0490A/s0": {
+   "group": "swirls, no on-sheet part",
+   "support_pct": 33.6,
+   "box_voxels_xyz": [
+    2664.0,
+    1051.0,
+    2453.0
+   ],
+   "chunks_hit_by_2000_points": 952,
+   "of_which_contain_a_surface_vertex": 229,
+   "surface_chunks": 265,
+   "box_background_pct_est": 33.0,
+   "support_at_or_below_box_background": false
+  },
+  "v3/PHerc0813/s0": {
+   "group": "swirls, no on-sheet part",
+   "support_pct": 30.4,
+   "box_voxels_xyz": [
+    2345.0,
+    2775.0,
+    3073.0
+   ],
+   "chunks_hit_by_2000_points": 1451,
+   "of_which_contain_a_surface_vertex": 225,
+   "surface_chunks": 439,
+   "box_background_pct_est": 27.0,
+   "support_at_or_below_box_background": false
+  },
+  "v3/PHerc0813/s9": {
+   "group": "follows the sheet throughout",
+   "support_pct": 52.8,
+   "box_voxels_xyz": [
+    3004.0,
+    3766.0,
+    5494.0
+   ],
+   "chunks_hit_by_2000_points": 1811,
+   "of_which_contain_a_surface_vertex": 128,
+   "surface_chunks": 650,
+   "box_background_pct_est": 24.4,
+   "support_at_or_below_box_background": false
+  },
+  "v3/PHerc0826/s0": {
+   "group": "swirls, no on-sheet part",
+   "support_pct": 31.7,
+   "box_voxels_xyz": [
+    2642.0,
+    1572.0,
+    2993.0
+   ],
+   "chunks_hit_by_2000_points": 1242,
+   "of_which_contain_a_surface_vertex": 273,
+   "surface_chunks": 407,
+   "box_background_pct_est": 22.6,
+   "support_at_or_below_box_background": false
+  },
+  "v3/PHerc1203/s0": {
+   "group": "swirls, no on-sheet part",
+   "support_pct": 28.5,
+   "box_voxels_xyz": [
+    2762.0,
+    1172.0,
+    2515.0
+   ],
+   "chunks_hit_by_2000_points": 1038,
+   "of_which_contain_a_surface_vertex": 197,
+   "surface_chunks": 239,
+   "box_background_pct_est": 25.8,
+   "support_at_or_below_box_background": false
+  },
+  "v3/PHerc1203/s9": {
+   "group": "swirls, no on-sheet part",
+   "support_pct": 28.5,
+   "box_voxels_xyz": [
+    2907.0,
+    1570.0,
+    4469.0
+   ],
+   "chunks_hit_by_2000_points": 1482,
+   "of_which_contain_a_surface_vertex": 232,
+   "surface_chunks": 489,
+   "box_background_pct_est": 17.6,
+   "support_at_or_below_box_background": false
+  },
+  "v3/PHerc1545/s0": {
+   "group": "swirls, no on-sheet part",
+   "support_pct": 31.2,
+   "box_voxels_xyz": [
+    2396.0,
+    1885.0,
+    3485.0
+   ],
+   "chunks_hit_by_2000_points": 1357,
+   "of_which_contain_a_surface_vertex": 214,
+   "surface_chunks": 350,
+   "box_background_pct_est": 27.6,
+   "support_at_or_below_box_background": false
+  },
+  "v3/PHerc0125/s7": {
+   "group": "escapes the papyrus",
+   "support_pct": 34.2,
+   "box_voxels_xyz": [
+    4099.0,
+    1111.0,
+    4580.0
+   ],
+   "chunks_hit_by_2000_points": 1468,
+   "of_which_contain_a_surface_vertex": 296,
+   "surface_chunks": 569,
+   "box_background_pct_est": 24.2,
+   "support_at_or_below_box_background": false
+  },
+  "v3/PHerc0211/s9": {
+   "group": "escapes the papyrus",
+   "support_pct": 65.0,
+   "box_voxels_xyz": [
+    4083.0,
+    1214.0,
+    4323.0
+   ],
+   "chunks_hit_by_2000_points": 1499,
+   "of_which_contain_a_surface_vertex": 282,
+   "surface_chunks": 565,
+   "box_background_pct_est": 17.6,
+   "support_at_or_below_box_background": false
+  },
+  "v3/PHerc0257/s9": {
+   "group": "escapes the papyrus",
+   "support_pct": 28.4,
+   "box_voxels_xyz": [
+    2341.0,
+    3224.0,
+    5249.0
+   ],
+   "chunks_hit_by_2000_points": 1703,
+   "of_which_contain_a_surface_vertex": 171,
+   "surface_chunks": 544,
+   "box_background_pct_est": 22.8,
+   "support_at_or_below_box_background": false
+  }
+ }
+}
