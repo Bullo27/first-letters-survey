@@ -15,6 +15,8 @@ machine: an RTX 3060 (12 GB), a 14-core Xeon and a home Wi-Fi link.
 
 > Update 2026-09-27: on-prediction support, the check [villa #1906](https://github.com/ScrollPrize/villa/pull/1906) adds to the tracer, for all 65 patches (see *Validation*).
 
+> Update 2026-09-27: the PHerc0841 letter-scale numbers rescored at matched blur, after Chris Scheirer's caveat that blur raises the score: the 14-checkpoint mean still beats every single checkpoint, by less (see *Calibration*).
+
 ## Summary
 
 <!-- SUMMARY -->
@@ -163,9 +165,10 @@ eligible 9.362 µm volumes), with the arms, readouts and pass/fail rules written
 - **On the team's own surfaces**, rendered exactly as here (our render matches their surface volume at r 0.999998),
   `ink_9um` finds where the ink is: r 0.54–0.61 against the team's predictions (shifted-map nulls at most 0.13), pixel
   AUC 0.74–0.81 against their labels. At letter scale it is blobs: Chris Scheirer's high-pass score is 0.046–0.054 with
-  all 14 checkpoints averaged (on his scale, blobs score 0.04 and a read where a person made out four letters 0.076).
-  No letter is readable. Rows show on one segment (ag174, row score 57.8); on the other two even the team's own
-  prediction scores only 34.1 and 28.7.
+  all 14 checkpoints averaged (on his scale, blobs score 0.04 and a read where a person made out four letters 0.076;
+  the score also rises with blur: a 4 px blur takes ours to 0.072–0.083, and no letter became readable in the
+  windows we checked). No letter is readable. Rows show on one segment (ag174, row score 57.8); on the other two
+  even the team's own prediction scores only 34.1 and 28.7.
 - **With the whole tool**, from seeds placed on the team's text, the grown surface leaves the text-bearing sheet: 0 of 3
   patches stay within 5 voxels of it (median distance 20–28 voxels), and their ink maps look like the speckle in the
   table below. Where the w00 and ag144 patches do lie on the sheet, their maps agree with the team's there (r 0.61 and

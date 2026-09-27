@@ -75,7 +75,31 @@ survey's speckle. So a survey negative means that the automatic patch showed no 
   0.015–0.027, the reverse means 0.000–0.007, the shifted-key nulls at most 0.007. On his scale (his exams, not these):
   the released model 0.035, blobs 0.04, a read where a person made out four letters 0.076, the best current reads
   0.11–0.14. Averaging the 14 released checkpoints about doubles a single checkpoint's score here and still stays at
-  blob level.
+  blob level; part of that gain is smoothing (next point).
+- **Blur-matched (post-hoc, 2026-09-27, [`blur_matched/`](blur_matched/)).** Blurring a map raises this score, so
+  numbers compare only at the same blur. That is Chris Scheirer's caveat in report 02 (which also finds that averages
+  raise a known-bad read's score in proportion), and he raised it about these numbers in our #robots thread. Every
+  map blurred by the same Gaussian (inside the mesh), the key left as is, one pixel set per segment
+  (`blur_matched.py`, `blur_matched.json`):
+
+  | segment | blur σ (px) | 14 single checkpoints, min–median–max | 14-checkpoint mean | mean ÷ best single | mean ÷ median single |
+  |---|---|---|---|---|---|
+  | w00 | 0 | 0.016–0.020–0.026 | 0.046 | 1.78 | 2.33 |
+  | w00 | 2 | 0.025–0.029–0.039 | 0.061 | 1.58 | 2.09 |
+  | w00 | 4 | 0.034–0.039–0.052 | 0.072 | 1.39 | 1.83 |
+  | ag144 | 0 | 0.016–0.024–0.030 | 0.053 | 1.77 | 2.23 |
+  | ag144 | 2 | 0.026–0.034–0.045 | 0.070 | 1.58 | 2.07 |
+  | ag144 | 4 | 0.039–0.046–0.056 | 0.082 | 1.47 | 1.80 |
+  | ag174 | 0 | 0.015–0.025–0.030 | 0.054 | 1.78 | 2.18 |
+  | ag174 | 2 | 0.025–0.036–0.045 | 0.072 | 1.59 | 1.98 |
+  | ag174 | 4 | 0.036–0.046–0.057 | 0.083 | 1.46 | 1.80 |
+
+  Blurred alike, the 14-checkpoint mean still scores above every single checkpoint, by less: 1.39–1.47 times the best
+  one at 4 px, against 1.77–1.78 unblurred. Blur alone lifts the mean from 0.046–0.054 to 0.072–0.083 at 4 px, around
+  the 0.076 of his four-letter read, and by eye no letter becomes readable in the 700 px window of each segment where
+  the team's prediction has the most 48 µm high-pass energy (`blur_view_*.jpg`: the mean as is, the mean blurred
+  4 px, the best single checkpoint blurred 4 px, the team's prediction). Shifted-key nulls (both survey checkpoints
+  and both means, up to 4 px): below 0.011.
 - **By eye (`r3_notes.md`).** w00 and ag144: speckle with a few blurry letter-like shapes, which turn out to sit on the
   team's strongest letters; no rows. ag174: letter-like strokes along two or three lines, which turn out to be the
   team's two clearest rows, letter by letter; the survey's visual check would have flagged this map. Nothing readable
@@ -122,20 +146,21 @@ on few shifts.
 - Arm B ran two jobs at a time, the B2 jobs first; `PLAN.md` fixes neither.
 - The A2 notes by eye are not blind: the team's maps had been seen during A1.
 - The letter-scale score, the team-map row scores, the figure and the display scripts (`r3_views.py`, `r3_b_views.py`,
-  `team_rowscore.py`, `make_results_tables.py`, `hp_score_posthoc.py`, `make_figure.py`) were added after the runs. No
-  pre-registered readout was changed.
+  `team_rowscore.py`, `make_results_tables.py`, `hp_score_posthoc.py`, `make_figure.py`) were added after the runs, and
+  the blur-matched rescoring (`blur_matched/`) on 2026-09-27. No pre-registered readout was changed.
 - The scripts are the copies that ran; their paths are from our machine.
 
 ## Files
 
 `PLAN.md` (frozen), `r3_notes.md` (notes by eye, in the order written), `results_tables.md` (every map, generated from
 the JSON files by `make_results_tables.py`), `armA_results.json`, `armB_results.json`, `team_rowscore.json`,
-`hp_score_posthoc.json`, `seeds_informed.json`, `seeds_blind.txt`, `catalog_PHerc0841.json`, `logs/`, `scripts/`.
+`hp_score_posthoc.json`, `seeds_informed.json`, `seeds_blind.txt`, `catalog_PHerc0841.json`, `logs/`, `scripts/`,
+`blur_matched/` (scripts, JSON, log and views of the blur-matched rescoring), `depth_sharpen/`.
 
 ## Credits and data
 
 The pixel-AUC comparison on these three segments is AndreasHad04's (villa #1867), with liliandevarieux's observations
 on depth order in the same thread; ibara pointed out that the `validation` mask of these label sets lies mostly outside
-`supervision` ([ink-disagree](https://github.com/ibarapascal/ink-disagree); we score inside `supervision`). The letter-scale score and its script are Chris Scheirer's (MIT). Scan,
+`supervision` ([ink-disagree](https://github.com/ibarapascal/ink-disagree); we score inside `supervision`). The letter-scale score and its script are Chris Scheirer's (MIT), and so is the blur-matched comparison. Scan,
 meshes, ink predictions and labels: Vesuvius Challenge open data (CC BY-NC 4.0), and the figure derived from them
 carries those terms.

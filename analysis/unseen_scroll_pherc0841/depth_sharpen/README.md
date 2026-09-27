@@ -33,6 +33,7 @@ segments and our renders of them.
   legible.
 
 So on these segments the filter's gain is at blob scale, not letter scale. Averaging the 14 released checkpoints was a
-much larger letter-scale lever here (0.046 to 0.054). The filter was fitted (without labels) on these same segments,
-so this test is in-sample; sharpening combined with the 14-checkpoint mean was not tested. The scripts are the copies
-that ran; their paths are from our machine.
+much larger letter-scale lever here (0.046 to 0.054; part of that is smoothing, see the blur-matched check in
+`../README.md`). The filter was fitted (without labels) on these same segments, so this test is in-sample; sharpening
+combined with the 14-checkpoint mean was not tested. The scripts are the copies that ran; their paths are from our
+machine.
