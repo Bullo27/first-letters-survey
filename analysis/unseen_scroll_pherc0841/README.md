@@ -71,16 +71,16 @@ survey's speckle. So a survey negative means that the automatic patch showed no 
 - **Letter scale (post-hoc, `hp_score_posthoc.py`).** Chris Scheirer's score from
   [vesuvius-reports, report 02](https://github.com/ShribyrLabs/vesuvius-reports/tree/main/02-9um-ink-reader-benchmark),
   with his constants: remove a 48 µm blur from both maps and correlate what is left. The key is the team's 2.403 µm
-  prediction area-averaged onto our grid (median tile offset at most 0.07 px). Single released checkpoints score
-  0.015–0.027, the reverse means 0.000–0.007, the shifted-key nulls at most 0.007. On his scale (his exams, not these):
-  the released model 0.035, blobs 0.04, a read where a person made out four letters 0.076, the best current reads
+  prediction area-averaged onto our grid (median tile offset at most 0.07 px). The survey's two checkpoints score
+  0.015–0.027 alone (all 14 single checkpoints 0.015–0.030, next point), the reverse means 0.000–0.007, the
+  shifted-key nulls at most 0.007. On his scale (his exams, not these): the released model 0.035, blobs 0.04, a read where a person made out four letters 0.076, the best current reads
   0.11–0.14. Averaging the 14 released checkpoints about doubles a single checkpoint's score here and still stays at
   blob level; part of that gain is smoothing (next point).
 - **Blur-matched (post-hoc, 2026-09-27, [`blur_matched/`](blur_matched/)).** Blurring a map raises this score, so
-  numbers compare only at the same blur. That is Chris Scheirer's caveat in report 02 (which also finds that averages
-  raise a known-bad read's score in proportion), and he raised it about these numbers in our #robots thread. Every
-  map blurred by the same Gaussian (inside the mesh), the key left as is, one pixel set per segment
-  (`blur_matched.py`, `blur_matched.json`):
+  numbers compare only at the same blur. That is Chris Scheirer's caveat in report 02 (which also finds that averaging
+  raises the score on its known-bad exam, where every read is blobs, roughly in proportion to w042's), and he raised
+  it about these numbers in our #robots thread. Every map blurred by the same Gaussian (inside the mesh), the key left
+  as is, one pixel set per segment (`blur_matched.py`, `blur_matched.json`):
 
   | segment | blur σ (px) | 14 single checkpoints, min–median–max | 14-checkpoint mean | mean ÷ best single | mean ÷ median single |
   |---|---|---|---|---|---|
@@ -95,7 +95,8 @@ survey's speckle. So a survey negative means that the automatic patch showed no 
   | ag174 | 4 | 0.036–0.046–0.057 | 0.083 | 1.46 | 1.80 |
 
   Blurred alike, the 14-checkpoint mean still scores above every single checkpoint, by less: 1.39–1.47 times the best
-  one at 4 px, against 1.77–1.78 unblurred. Blur alone lifts the mean from 0.046–0.054 to 0.072–0.083 at 4 px, around
+  one at 4 px, against 1.77–1.78 unblurred. Whether that remainder is letter signal would take a known-bad exam like
+  his, which we do not have here. Blur alone lifts the mean from 0.046–0.054 to 0.072–0.083 at 4 px, around
   the 0.076 of his four-letter read, and by eye no letter becomes readable in the 700 px window of each segment where
   the team's prediction has the most 48 µm high-pass energy (`blur_view_*.jpg`: the mean as is, the mean blurred
   4 px, the best single checkpoint blurred 4 px, the team's prediction). Shifted-key nulls (both survey checkpoints

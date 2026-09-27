@@ -32,8 +32,8 @@ segments and our renders of them.
   the same fragments of the team's letters as the baseline, a few strokes slightly more continuous; no letter becomes
   legible.
 
-So on these segments the filter's gain is at blob scale, not letter scale. Averaging the 14 released checkpoints was a
-much larger letter-scale lever here (0.046 to 0.054; part of that is smoothing, see the blur-matched check in
-`../README.md`). The filter was fitted (without labels) on these same segments, so this test is in-sample; sharpening
-combined with the 14-checkpoint mean was not tested. The scripts are the copies that ran; their paths are from our
-machine.
+So on these segments the filter's gain is at blob scale, not letter scale. Averaging all 14 released checkpoints instead
+of these 2 moved this score much more (from 0.024–0.029 to 0.046–0.054; part of that is smoothing, see the
+blur-matched check in `../README.md`). The filter was fitted (without labels) on these same segments, so this test is
+in-sample; sharpening combined with the 14-checkpoint mean was not tested. The scripts are the copies that ran; their
+paths are from our machine.

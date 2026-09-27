@@ -15,7 +15,7 @@ machine: an RTX 3060 (12 GB), a 14-core Xeon and a home Wi-Fi link.
 
 > Update 2026-09-27: on-prediction support, the check [villa #1906](https://github.com/ScrollPrize/villa/pull/1906) adds to the tracer, for all 65 patches (see *Validation*).
 
-> Update 2026-09-27: the PHerc0841 letter-scale numbers rescored at matched blur, after Chris Scheirer's caveat that blur raises the score: the 14-checkpoint mean still beats every single checkpoint, by less (see *Calibration*).
+> Update 2026-09-27: the PHerc0841 letter-scale numbers rescored at matched blur, after Chris Scheirer's caveat that blur raises the score: the 14-checkpoint mean still beats every single checkpoint, by less (see *Calibration* and its details page).
 
 ## Summary
 
