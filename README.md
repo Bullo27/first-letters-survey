@@ -13,6 +13,8 @@ machine: an RTX 3060 (12 GB), a 14-core Xeon and a home Wi-Fi link.
 
 > Update 2026-09-26: the PHerc1447 segment held back from the first release (20250702235910) is now included, with the ring-shaped mark that made us hold it back (see *Validation*).
 
+> Update 2026-09-30: the team has since found text on PHerc1447 (announced on the Vesuvius Challenge Discord on 2026-09-24, around x 4144, y 2742, z 12557 of volume 20250521151220; the reason for [villa #1887](https://github.com/ScrollPrize/villa/pull/1887)). That point lies on segment 20250702235910, 4.7 mm from the ring discussed under *Validation*, so the ring does not stand alone after all; see the updated bullet there.
+
 > Update 2026-09-27: on-prediction support, the check [villa #1906](https://github.com/ScrollPrize/villa/pull/1906) adds to the tracer, for all 65 patches (see *Validation*).
 
 > Update 2026-09-27: the PHerc0841 letter-scale numbers rescored at matched blur, after Chris Scheirer's caveat that blur raises the score: the 14-checkpoint mean still beats every single checkpoint, by less (see *Calibration* and its details page).
@@ -143,6 +145,16 @@ A 20-generation test patch with the default seed (PHerc0343, 0.42 cm²) took 3 m
   `analysis/pherc1447_ring/`.
 
   ![An isolated ring in the 14-checkpoint forward mean on PHerc1447 segment 20250702235910, not in the reverse maps](results/figures/pherc1447_ring.jpg)
+
+  *Update 2026-09-30.* Our main reason for reading the ring as structure no longer holds. The text location the team
+  announced on Discord on 2026-09-24 (x 4144, y 2742, z 12557) lies 8.6 voxels (74 µm) from this segment's surface, 4.7 mm
+  from the ring's centre on the render. We ran the 9 µm model released on 2026-09-29
+  ([ink-8um-v8in](https://huggingface.co/YoussefMoNader/ink-8um-v8in), which never saw PHerc1447) and its PHerc1447
+  fine-tune (loo-w062) on this area of the segment (64 px tiles, stride 21, the depth order the models were trained
+  on). Both give strong responses just below the ring and to its upper left, and neither outlines the ring itself.
+  Whether the ring is part of a letter is open.
+
+  ![The ring area of segment 20250702235910: render, the released 9 um model, its PHerc1447 fine-tune; red: announced text location, yellow: the ring](results/figures/pherc1447_ring_v8in.jpg)
 - **Limits of the score.** Cut into 6 cm² tiles, the same control maps score 6.8–77.4, which overlaps the range of
   the negatives, so a low score on a small patch proves little. That is why every verdict here is visual. The
   other way round, the highest single map in the survey (33.5, PHerc0813 v3 seed 0, reverse) is speckle and blotches
